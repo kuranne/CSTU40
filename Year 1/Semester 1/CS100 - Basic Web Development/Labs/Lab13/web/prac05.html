@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add child item from js</title>
+</head>
+<body>
+    <div id="list"></div>
+    <button type="button" id="createItem">add item!</button>
+    <script>
+        function addItem() {
+            const theItem = document.createElement("p");
+            theItem.textContent = "Hello World!";
+            document.getElementById("list").appendChild(theItem);
+        }
+        document.getElementById("createItem").addEventListener("click", addItem);
+    </script>
+</body>
+</html>

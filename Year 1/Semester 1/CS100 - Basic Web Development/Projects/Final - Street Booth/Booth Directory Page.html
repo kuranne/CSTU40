@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&family=Instrument+Serif:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSSFiles/Basestyle.css">
+    <link rel="stylesheet" href="./CSSFiles/BD.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Booth Directory Page</title>
+</head>
+<body class="body">
+    <!-- Navbar -->
+<nav class="navbar-leftstyle">
+  <div class="navbar-logo">
+
+    <a href="Homepage.html">
+        <img src="MediaFiles/home.png" 
+             alt="Logo 1" 
+             title="Homepage" 
+             data-bs-toggle="tooltip">
+    </a>
+
+    <a href="Registration Page.html">
+        <img src="MediaFiles/user.png" 
+             alt="Logo 2" 
+             title="Registration" 
+             data-bs-toggle="tooltip">
+    </a>
+
+    <a href="Leave Your Feedback Page.html">
+        <img src="MediaFiles/feedback.png" 
+             alt="Logo 3" 
+             title="Leave your feedback"
+             data-bs-toggle="tooltip">
+    </a>
+    <button type="button" id="apperance-toggle">
+        <img src="./MediaFiles/moon_icon_159962.svg" alt="Moon" title="Switch Theme" data-bs-toggle="tooltip" id="moon-icon">
+        <img src="./MediaFiles/sun-black-symboi_icon-icons.com_64259.svg" alt="Sun" title="Switch Theme" data-bs-toggle="tooltip" id="sun-icon">
+    </button>
+
+  </div>
+
+  <div class="navbar-toggle" id="navbarToggle">
+    ☰
+  </div>
+
+  <ul class="navbar-menu" id="navbarMenu">
+      <li><a href="Booth1 Page.html">Beverages</a></li>
+      <li><a href="Booth2 Page.html">Desserts</a></li>
+      <li><a href="Booth3 Page.html">Photobooth</a></li>
+      <li><a href="Booth4 Page.html">Gadgets</a></li>
+  </ul>
+</nav>
+<!-- จบ Navbar -->
+
+
+    <div class="row bd" id="bd-1">
+        <div class="col-10 col-md-6 col-lg-6 order-2 order-md-1 order-lg-1 sub-bd" >
+            <h2> POWERPUFF </h2>
+            <p>A drink shop specializing in matcha, using premium matcha sourced from Japan. With its charming décor and special drinks available only at exclusive events, this place is sure to become your number one matcha spot forever.</p>
+            <a href="Booth1 Page.html">Click Here</a>
+        </div>
+        <div class="col-10 col-md-6 col-lg-6 order-1 order-md-2 order-lg-2 bd-img ">
+            <img src="MediaFiles/bd-cafe-bev-2.jpg">
+        </div>
+    </div>
+
+   <div class="row bd" id="bd-2">
+        <div class="col-10 col-md-6 col-lg-6 order-2 order-md-1 order-lg-1 sub-bd" >
+            <h2> SWEETYDAY </h2>
+            <p>SweetyDay is a small dessert café that wishes to share happiness every day through the gentle sweetness of its thoughtfully made treats and drinks. From fragrant donuts to freshly baked cookies, the warm aroma will welcome you from the very first step inside.</p>
+            <a href="Booth2 Page.html">Click Here</a>
+        </div>
+        <div class="col-10 col-md-6 col-lg-6 order-1 order-md-2 order-lg-2 bd-img">
+            <img src="MediaFiles/bd-booth2.jpg">
+        </div>
+    </div>
+
+    <div class="row bd" id="bd-3">
+        <div class="col-10 col-md-6 col-lg-6 order-2 order-md-1 order-lg-1 sub-bd" >
+            <h2> SHUTTER TIME </h2>
+            <p>Step into a world of memories at Shuttertime, every smile and laugh is preserved in a high-quality photo you can cherish forever. Let Shuttertime be the perfect guest at your next event, or the highlight of your day</p>
+            <a href="Booth3 Page.html">Click Here</a>
+        </div>
+        <div class="col-10 col-md-6 col-lg-6 order-1 order-md-2 order-lg-2 bd-img">
+            <img src="MediaFiles/bd-booth3.jpeg">
+        </div>
+    </div>
+
+    <div class="row bd" id="bd-4">
+        <div class="col-10 col-md-6 col-lg-6 order-2 order-md-1 order-lg-1 sub-bd" >
+            <h2> HAMHAM </h2>
+            <p>A small cozy shop filled with cute stationery, keychains, and handmade coasters — 
+              a warm little space where every carefully chosen item brings a touch of happiness 
+              to your everyday life.</p>
+            <a href="Booth4 Page.html">Click Here</a>
+        </div>
+        <div class="col-10 col-md-6 col-lg-6 order-1 order-md-2 order-lg-2 bd-img">
+            <img src="MediaFiles/Bdbooth4.png">
+        </div>
+    </div>
+        
+    <footer class="footer">
+  <div class="footer-container">
+    <h3>Contact us</h3>
+
+    <div class="footer-content">
+      <!-- Left side: Contact Info -->
+      <div class="contact-info">
+        <p><i class="fa-solid fa-phone"></i> 069-999-999</p>
+        <p><i class="fa-solid fa-envelope"></i> CAFEFAIR_official@gmail.com</p>
+        <p><i class="fa-solid fa-calendar-days"></i> Monday - Friday <br> 09.00 - 17.00</p>
+      </div>
+
+      <!-- Right side: Social Media -->
+      <div class="social-info">
+        <p><i class="fa-brands fa-instagram"></i> CAFE FAIR</p>
+        <p><i class="fa-brands fa-facebook"></i> CAFE FAIR</p>
+        <p><i class="fa-brands fa-x-twitter"></i> @CAFE_FAIR</p>
+        <p><i class="fa-brands fa-line"></i> @CAFEFAIR_official</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JSFiles/homepage.js"></script>
+<script src="JSFiles/basestyle.js"></script>
+</body>
+</html>

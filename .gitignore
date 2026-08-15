@@ -1,0 +1,14 @@
+*
+!*/
+!*.*
+
+node_modules/
+.vscode/
+.DS_Store
+*.class
+*.out
+*.o
+*.so
+*.exe
+
+**/[Pp]rivate/**

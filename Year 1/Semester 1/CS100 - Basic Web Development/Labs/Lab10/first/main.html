@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container pt-3">
+        <form action="" class="was-validated" novalidate>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <label for="Username"><h2>Username</h2></label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" name="Username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <label for="Email"><h4>Email</h4></label>
+                    <div class="input-group">
+                        <input type="email" name="Email" class="form-control" placeholder="example@email.com" aria-label="Email" aria-describedby="basic-addon1">
+                        <span class="input-group-text" id="basic-addon1">@Mail</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="Password"><h4>Password</h4></label>
+                    <div class="input-group">
+                        <input type="password" name="Password" placeholder="Password" aria-label="Password" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+
+</html>
