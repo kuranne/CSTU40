@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="output">Waiting...</p>
+    <button id="btn" onclick="updateText()">Click Me</button>
+    <script>
+        function updateText() {
+            const output = document.getElementById("output");
+            output.innerHTML = "Text updated!";
+            output.style.color = "blue";
+        }
+    </script>
+</body>
+
+</html>
