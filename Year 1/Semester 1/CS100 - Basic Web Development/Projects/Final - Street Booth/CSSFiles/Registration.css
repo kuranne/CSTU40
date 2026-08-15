@@ -1,0 +1,145 @@
+
+body {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    background: #fdfaf6 url('https://www.toptal.com/designers/subtlepatterns/patterns/symphony.png');
+    color: #4b3b2c;
+  }
+.navbar-leftstyle {
+  position: sticky;
+}
+
+.form-check-label {
+  font-weight: normal;
+}
+.container-fluid {
+  margin-bottom: 5% !important;
+  margin-top: 8% !important;
+}
+
+.content p {
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+#wantcenter{
+   display: flex;
+  justify-content: center;
+}
+
+.all-title {
+  margin-bottom: 10%;
+}
+
+  .sidebar {
+    background:#fff3f6;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    border-right: 2px solid #fa9fb5;
+  }
+  .sidebar h2 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .sidebar a {
+    color: #4b3b2c;
+    display: block;
+    text-decoration: none;
+    margin: 0.3rem 0;
+  }
+  .sidebar a:hover {
+    color: #a37449;
+  }
+  .content {
+    padding: 3rem;
+  }
+  h1.title {
+    font-family: "Instrument", Serif;
+    font-weight: 1000;
+    font-size: 2.5rem;
+    color: #d86b90;
+  }
+  h2.subtitle {
+    color: #badd7f;
+    margin-bottom: 1.5rem;
+  }
+  .form-label{
+    font-weight: 200px;
+  }
+  .form-control, .form-select {
+    border-radius: 10px;
+    border-color: #d93553;
+  }
+  .btn-primary {
+    font-weight: 600;
+    background-color: #d93553;
+    border: none;
+    border-radius: 10px;
+  }
+  .btn-primary:hover {
+    background-color: #811e30;
+  }
+  .btn-outline-secondary {
+    border-radius: 10px;
+  }
+  .card {
+    border: none;
+    background-color: #fff3f6 ;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+/* Dark Mode */
+body.dark-mode {
+  background: var(--bgc-dark);
+  color: var(--p-dark);
+}
+
+body.dark-mode .sidebar {
+  background: var(--bgc-dark-pink);
+  border-right: 2px solid var(--darker-pink);
+}
+
+body.dark-mode .sidebar h2 {
+  color: var(--h2);
+}
+
+body.dark-mode .sidebar a {
+  color: var(--p-dark);
+}
+
+body.dark-mode .sidebar a:hover {
+  color: var(--h4);
+}
+
+body.dark-mode h1.title {
+  color: var(--h2);
+}
+
+body.dark-mode h2.subtitle {
+  color: var(--h4);
+}
+
+body.dark-mode .card {
+  background-color: var(--bgc-dark-pink);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .form-label,
+body.dark-mode label {
+  color: var(--p-dark);
+}
+
+body.dark-mode ::placeholder {
+  color: #ccc;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: var(--darkest-pink);
+  border-color: var(--darker-pink);
+  color: var(--p-dark);
+}

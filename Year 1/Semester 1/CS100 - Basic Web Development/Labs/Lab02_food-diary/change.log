@@ -1,0 +1,30 @@
+commit f0c67108548a5424449b5eaca73912b93b552046 (HEAD -> master)
+Author: Maisa <kurannemaisa@outlook.com>
+Date:   Sun Aug 31 00:05:06 2025 +0700
+
+    Add style.css and decorate the website
+
+commit f5f0f7b9fe3b977444134465d300f76be8e3b1ec
+Author: Maisa <kurannemaisa@outlook.com>
+Date:   Sat Aug 30 23:01:30 2025 +0700
+
+    Add lunch and dinner
+
+commit 69912691edaba3e1002765a4134a49750b196ce0
+Author: Maisa <kurannemaisa@outlook.com>
+Date:   Sat Aug 30 23:00:06 2025 +0700
+
+    Add breakfast
+
+commit ebdb478b2d82f51c04dfc5b33259d9eb653730d1
+Author: Maisa <kurannemaisa@outlook.com>
+Date:   Sat Aug 30 22:48:59 2025 +0700
+
+    add index.html
+
+
+### Summarize ###
+Firstly, I make directory "food-diary" and add index.html file into it on commit ebdb478b2d82f51c04dfc5b33259d9eb653730d1.
+Next, I add 'breakfast' title and 'food menu' into index.html
+Then, I add 'lunch' and 'dinner' seem like I added breakfast.
+Finally, I create an style.css then I decorate the website by using css language by I had added some image by use http link then decorate it look minimal style.

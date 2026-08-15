@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Form Validation Example</title>
+</head>
+
+<body>
+    <h3>HTML5 Form Validation Demo</h3>
+
+    <form>
+        <!-- required + type --> 
+        <label>Email:</label><br>
+        <input type="email" name="email" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{2,}" required>
+        <small>Must be a valid email address</small>
+        <br><br>
+
+        <!-- minlength + maxlength -->
+        <label>Username (3–10 characters):</label><br>
+        <input type="text" name="username" minlength="3" maxlength="10" required>
+        <br><br>
+
+        <!-- pattern -->
+        <label>Password (at least one number):</label><br>
+        <input type="password" name="password" pattern="(?=.*\d).{6,}" required>
+        <small>At least 6 characters with a number</small>
+        <br><br>
+
+        <!-- min + max -->
+        <label>Age (18–100):</label><br>
+        <input type="number" name="age" min="18" max="100" required>
+        <br><br>
+
+        <!-- step -->
+        <label>Rating (0–5, step 0.5):</label><br>
+        <input type="number" name="rating" min="0" max="5" step="0.5">
+        <br><br>
+
+        <!-- checkbox required -->
+        <input type="checkbox" name="terms" required>
+        I agree to the Terms and Conditions
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

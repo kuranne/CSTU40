@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with js</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow-sm p-4">
+            <h3 id="text-primary mb-4">Registration Page</h3>
+
+            <form id="registration">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="text" class="form-control" id="age" placeholder="Enter Your Age">
+                </div>
+
+                <button type="button" class="btn btn-primary w-100" id="register">Submit!</button>
+            </form>
+            <div class="mt-4">
+                <h5>Submit Data:</h5>
+                <div class="border p-3 bg-white rounded" id="output"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const age = document.getElementById("age").value.trim();
+
+            if (!name || !email || !age) {
+                alert("Fill the field!");
+                return;
+            }
+
+            const newRegister = document.createElement("div");
+            newRegister.classList.add("p-2", "rounded");
+            newRegister.innerHTML = `
+            <p><strong>Name: </strong>*${name}*</p>
+            <p><strong>Email: </strong>*${email}*</p>
+            <p><strong>Age: </strong>*${age}*</p>
+            `;
+
+            document.getElementById("output").appendChild(newRegister);
+            document.getElementById("registration").reset();
+        }
+        document.getElementById("register").addEventListener("click", submitForm);
+    </script>
+
+</body>
+</html>

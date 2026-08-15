@@ -1,0 +1,25 @@
+.content {
+    margin: 20%;
+    margin-top: 3%;
+}
+
+.header {
+    color: #434343;
+}
+
+.plaint {
+    color: #606060;
+}
+.olist {
+    list-style-type: lower-roman;
+}
+.ulist {
+    list-style-type: disc;
+}
+
+#imgtham {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}

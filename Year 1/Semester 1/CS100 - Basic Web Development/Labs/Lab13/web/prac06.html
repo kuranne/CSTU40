@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete item with js</title>
+</head>
+<body>
+    <div id="list"></div>
+    <button type="button" id="addItem">add!</button>
+    <button type="button" id="delItem">delete!</button>
+    <script>
+        function addItem() {
+            const theItem = document.createElement("p");
+            theItem.textContent = "Hello World!";
+            document.getElementById("list").appendChild(theItem);
+        }
+
+        function delItem() {
+            const theList = document.getElementById("list");
+            const lastItem = theList.lastElementChild;
+            if (lastItem) {
+                theList.removeChild(lastItem);
+            } else {
+                alert("No Item in List!");
+            }
+        }
+
+        document.getElementById("addItem").addEventListener("click", addItem);
+        document.getElementById("delItem").addEventListener("click", delItem);
+
+    </script>
+</body>
+</html>
