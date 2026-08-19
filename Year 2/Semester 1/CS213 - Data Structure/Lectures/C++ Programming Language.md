@@ -3,7 +3,7 @@ type: lecture
 description:
 ---
 
-#Weel1, #Week2
+#Week1  #Week2
 
 # Lesson
 

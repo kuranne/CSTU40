@@ -10,7 +10,7 @@ status: developing
 related:
   - "[[TU101 Final Exam Summation]]"
 sources:
-  - "[[university-tu101-final]]"
+  - "[[Final Summation TU101]]"
 complexity: basic
 domain: sociology
 aliases:

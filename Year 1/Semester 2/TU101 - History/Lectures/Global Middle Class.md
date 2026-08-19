@@ -11,7 +11,7 @@ related:
   - "[[TU101 Final Exam Summation]]"
   - "[[Göran Therborn]]"
 sources:
-  - "[[university-tu101-final]]"
+  - "[[Final Summation TU101]]"
 complexity: intermediate
 domain: sociology
 address: c-000008
