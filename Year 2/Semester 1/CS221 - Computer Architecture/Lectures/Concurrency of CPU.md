@@ -1,7 +1,6 @@
 ---
 description: Learning about Concurrency of Parallelism, Hardware Organize, Computer Architecture
 ---
-
 #Week1
 
 # Lesson
