@@ -12,7 +12,7 @@ related:
   - "[[Neoliberalism]]"
   - "[[Financialization]]"
 sources:
-  - "[[university-tu101-final]]"
+  - "[[Final Summation TU101]]"
 entity_type: person
 role: Sociologist
 first_mentioned: "[[TU101 Final Exam Summation]]"
