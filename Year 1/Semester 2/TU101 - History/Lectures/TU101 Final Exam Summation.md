@@ -16,7 +16,7 @@ related:
   - "[[Global Middle Class]]"
   - "[[Göran Therborn]]"
 sources:
-  - "[[university-tu101-final]]"
+  - "[[Final Summation TU101]]"
 source_type: lecture
 date_published: 2026-04-30
 confidence: high
