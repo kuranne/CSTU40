@@ -11,4 +11,10 @@ node_modules/
 *.so
 *.exe
 
+*.log
+log/
+**/log/**
+.agent/log/
+.agents/log/
+
 **/[Pp]rivate/**
