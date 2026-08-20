@@ -59,20 +59,20 @@ Processors are categorized into four major architectures based on where operands
 ### 2.1 Accumulator Architecture (1-Address Machine)
 - **Principle:** Uses a single dedicated **Accumulator Register (AC)**. All arithmetic/logic instructions implicitly use AC as one operand and the destination.
 - **Basic Instructions:**
-  - `load M`: $	ext{AC} \leftarrow 	ext{Mem}[M]$
-  - `store M`: $	ext{Mem}[M] \leftarrow 	ext{AC}$
-  - `add M`: $	ext{AC} \leftarrow 	ext{AC} + 	ext{Mem}[M]$
-  - `sub M`: $	ext{AC} \leftarrow 	ext{AC} - 	ext{Mem}[M]$
+  - `load M`:$AC \leftarrow 	Mem[M]$
+  - `store M`: $Mem[M] \leftarrow 	AC$
+  - `add M`: $AC \leftarrow 	AC + 	Mem[M]$
+  - `sub M`: $AC \leftarrow 	AC - 	Mem[M]$
 
 ---
 
 ### 2.2 Stack Architecture (0-Address Machine)
 - **Principle:** Operands are maintained in a **Last-In, First-Out (LIFO) Stack**, with a **Stack Pointer (SP)** tracking the Top of Stack (TOS). Arithmetic instructions operate implicitly on values popped from TOS (0-Address instructions).
 - **Basic Instructions:**
-  - `push M`: $	ext{Stack}[	ext{top}] \leftarrow 	ext{Mem}[M]$
-  - `pop M`: $	ext{Mem}[M] \leftarrow 	ext{Stack}[	ext{top}]$
+  - `push M`: $Stack[	top] \leftarrow 	Mem[M]$
+  - `pop M`: $Mem[M] \leftarrow 	Stack[	top]$
   - `add`: Pops top two elements, adds them, and pushes result back onto stack.
-  - `sub`: Pops top two elements ($	ext{Top-1} - 	ext{Top}$), subtracts them, and pushes result back onto stack.
+  - `sub`: Pops top two elements ($Top-1 - 	Top$), subtracts them, and pushes result back onto stack.
 - *Examples:* Java Virtual Machine (JVM Bytecode), PostScript, Forth.
 
 **Example: Evaluating $C = A + B$ on Stack:**
@@ -157,44 +157,46 @@ pop A               # Store Final Result in Mem[A]
 
 ## 5. x86_64 Instructions
 
->[!warning] S is source, D is destination (destination must be register)
+>[!info] 
+>**S** stands for **source**, 
+>**D** stands for **destination** (destination must be register)
 
-| Operation | Instruction | Meaning                                                                                                                                                                       |
-| --------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Copy      | mov S, D    | copy source -> destination                                                                                                                                                    |
-| Add       | add S, D    | D = D + S                                                                                                                                                                     |
-| Sub       | sub S, D    | D = D - S                                                                                                                                                                     |
-| Negative  | neg D       | D = -D                                                                                                                                                                        |
-| Multiply  | imul S, D   | D = D \* S                                                                                                                                                                    |
-| Divide    | idiv S      | %rax = %rdx:%rax / S<br>%rdx = %rdx:%rax % S<br>**(S must be register)**<br><br>==Result== of Divide will store in **%rax**<br>==Remainder== of Devide will store in **%rdx** |
-| Convert   | cqto        | Extend %rax to %rdx:%rax                                                                                                                                                      |
-| Increment | inc D       | D = D + 1                                                                                                                                                                     |
-| Decrement | dec D       | D = D - 1                                                                                                                                                                     |
+| Operation     | Instruction | Meaning                                                                                                                                                                                  |
+| ------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Copy**      | mov S, D    | copy source -> destination                                                                                                                                                               |
+| **Add**       | add S, D    | $D = D + S$                                                                                                                                                                              |
+| **Sub**       | sub S, D    | $D = D - S$                                                                                                                                                                              |
+| **Negative**  | neg D       | $D = -D$                                                                                                                                                                                 |
+| **Multiply**  | imul S, D   | $D = D * S$                                                                                                                                                                              |
+| **Divide**    | idiv S      | $\%rax = \%rdx:\%rax / S$<br>$\%rdx = \%rdx:\%rax \% S$<br>**(S must be register)**<br><br>==Result== of Divide will store in **%rax**<br>==Remainder== of Divide will store in **%rdx** |
+| **Convert**   | cqto        | Extend %rax to %rdx:%rax                                                                                                                                                                 |
+| **Increment** | inc D       | D = D + 1                                                                                                                                                                                |
+| **Decrement** | dec D       | D = D - 1                                                                                                                                                                                |
 ### To Validate Div use:
 $$
 \frac{(\%rdx+2^{64})+\%rax}{S}
 $$
 ### Exercise 
-**Let %rax = 1, %rcx = 1024, and %rdx = 64. 
+**Let $\%rax = 1, \%rcx = 1024, \%rdx = 64.$
 Wrtie the output of the following instructions.** 
 
 ```asm
-1. add %rcx,%rax => %rax = 1025
-2. neg %rax => %rax = 1025
-3. idiv %rcx => %rax = 1, %rdx = 1
+add %rcx,%rax ; %rax = 1025
+neg %rax ; %rax = 1025
+idiv %rcx ; %rax = 1, %rdx = 1
 ```
 
-| Operation            | Instruction | Meaning                                                                                                                 |
-| -------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Bitwise And          | and S, D    | D = D & S                                                                                                               |
-| Bitwise Or           | sub S, D    | D = D \| S                                                                                                              |
-| Bitwise Xor          | xor S, D    | D = D ^ S                                                                                                               |
-| Bitwise Not          | not D       | D = ~D                                                                                                                  |
-| Left Shift           | shl S, D    | D = D << S<br>from `0010` -> `0100`<br>shift 1 time is mul by 2                                                         |
-| Unsigned Right Shift | shr S, D    | D = D >>> S<br>from `1001` -> `0100`<br>shift 1 time is div                                                             |
-| Signed Right Shift   | sar S, D    | D = D >> S<br>from `1001` -> `1100`<br>1. copy 1st bit from left<br>2. rm last bit out<br>3. push from left with copied |
-| Push                 | push S      | Push S on system stack                                                                                                  |
-| Pop                  | pop D       | Pop from system stack into D                                                                                            |
+| Operation                | Instruction | Meaning                                                                                                                   |
+| ------------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **Bitwise And**          | and S, D    | *D = D \& S*                                                                                                              |
+| **Bitwise Or**           | sub S, D    | *D = D \| S*                                                                                                              |
+| **Bitwise Xor**          | xor S, D    | *D = D ^ S*                                                                                                               |
+| **Bitwise Not**          | not D       | *D = ~D*                                                                                                                  |
+| **Left Shift**           | shl S, D    | *D = D << S*<br>from `0010` -> `0100`<br>shift 1 time is mul by 2                                                         |
+| **Unsigned Right Shift** | shr S, D    | *D = D >>> S*<br>from `1001` -> `0100`<br>shift 1 time is div                                                             |
+| **Signed Right Shift**   | sar S, D    | *D = D >> S*<br>from `1001` -> `1100`<br>1. copy 1st bit from left<br>2. rm last bit out<br>3. push from left with copied |
+| **Push**                 | push S      | Push S on system stack                                                                                                    |
+| **Pop**                  | pop D       | Pop from system stack into D                                                                                              |
 
 ---
 ## 🔗 Related Notes & References
