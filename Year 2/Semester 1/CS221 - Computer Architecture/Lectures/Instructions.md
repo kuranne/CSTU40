@@ -1,121 +1,204 @@
 ---
 type: lecture
-description:
+title: Instruction Set Architecture (ISA) & Machine Instructions
+course_code: CS221
+week: 1, 2
+tags:
+  - computer-architecture
+  - instruction-set
+  - isa
+  - stack-architecture
+  - accumulator
+description: In-depth exploration of Instruction Set Architecture (ISA), Machine Code representation, Temporary Storage models (Accumulator, Stack, General-Purpose Registers), and instruction execution tracing.
 ---
-#Week1 #Week2 
-# Lesson
 
-## Instructions Set
+# 📜 Instruction Set Architecture (ISA) & Machine Instructions
 
-**including**
+> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS221]] > [[Instructions]]
+> **Related Notes:** [[Register Architectures]] \| [[General Purpose]] \| [[Concurrency of CPU]] \| [[CS221]]
 
-- Instructions
-- Temporary Storage
-- Address modes specifying memory locations
-  **examples:** iA32, x86_64 or AMD64, ARM64v8
+---
 
-### Instructions
+## 1. Instruction Set Architecture (ISA) Components
 
-| ISA  | MC/Asm                                                                     |
-| ---- | -------------------------------------------------------------------------- |
-| ARM  | 1110 0010 1000 0110 0110 0000 0000 0001<br>add r6, r6, #1 ; plus r6 with 1 |
-| iA32 | 0100 0000<br>inc %eax                                                      |
+An **Instruction Set Architecture (ISA)** is the abstract boundary between CPU hardware and system software, defining:
+1. **Instruction Formats & Opcodes:** Binary layout and operation encodings.
+2. **Data Types & Sizes:** Byte (8b), Word (16b), Doubleword (32b), Quadword (64b).
+3. **Addressing Modes:** Mechanisms for specifying memory operand addresses.
+4. **Temporary Storage Models:** Registers, accumulator, and hardware stack.
+5. **Exception & Interrupt Handling:** Trap mechanisms and system interrupts.
 
-### Temporary Storage
+### Machine Code vs. Assembly Representation
 
-Temp is used for an area in the processor, but for dev we use for store the value.
-We can classify ISA to
-1. [Accumulator Architecture](#### Accumulator Architecture)
-2. [Stack Architecture](#### Stack Architecture)
-3. [General-Purpose Register Architecture](#### General-Purpose Register Architecture)
-#### Accumulator Architecture
+| ISA | Machine Code Representation | Assembly Language | Description |
+| :--- | :--- | :--- | :--- |
+| **ARM (RISC)** | `1110 0010 1000 0110 0110 0000 0000 0001` (32-bit Fixed) | `add r6, r6, #1` | Add immediate 1 to register `r6` |
+| **x86 / IA-32 (CISC)** | `0100 0000` (1-byte Variable length) | `inc %eax` | Increment register `%eax` by 1 |
 
-Accumulator Register
-![[Screenshot 2026-08-11 at 13.49.05.png|225]]
+---
 
-Instructions set of accumulator
-1. load M
-2. store M
-3. add M
-4. sub M
+## 2. Temporary Storage Models in Processors
 
-#### Stack Architecture
+Processors are categorized into four major architectures based on where operands are stored:
 
-**Stack Pointer**
-To add value, use push.
-Another way ,use pop.
-![[Screenshot 2026-08-11 at 14.16.35.png|279]]
-<small>Often found in JVM</small>
-
-Instructions set of stack
-1. push M : stack[top] <- Mem[M]
-2. pop M : Mem[M] <- stack[top] 
-3. add : stack [top] <- stack [top] + stack [top - 1]
-4. sub : stack [top] <- stack [top - 1] - stack [top] ; Must load bigger one first
-
-**example** C = A + B
-```asm
-push A ; stack [A]
-push B ; stack [A, B] buttom <- top
-add ; stack [ B + A ]
-pop C ; C = B + A 
+```
+                            ┌─────────────────────────────┐
+                            │    Temporary Storage Models │
+                            └─────────────────────────────┘
+                                           │
+         ┌──────────────────┬──────────────┴──────────────┬──────────────────┐
+         ▼                  ▼                             ▼                  ▼
+  1. Accumulator         2. Stack                      3. Register-       4. Register-
+     Architecture           Architecture                  Memory             Register
+     - 1 Address            - 0 Address                   - 2 Address        - 3 Address
+     - Implicit AC          - Top of Stack                - CISC (x86)       - RISC (ARM)
 ```
 
-#### General-Purpose Register Architecture
+---
 
-each register called by its name
-1. Register-register architecture (ARM) *Can olny use register as operator*
-2. Register-memory architecture (Intel) *Also use memory as operator*
-### Quiz
+### 2.1 Accumulator Architecture (1-Address Machine)
+- **Principle:** Uses a single dedicated **Accumulator Register (AC)**. All arithmetic/logic instructions implicitly use AC as one operand and the destination.
+- **Basic Instructions:**
+  - `load M`: $	ext{AC} \leftarrow 	ext{Mem}[M]$
+  - `store M`: $	ext{Mem}[M] \leftarrow 	ext{AC}$
+  - `add M`: $	ext{AC} \leftarrow 	ext{AC} + 	ext{Mem}[M]$
+  - `sub M`: $	ext{AC} \leftarrow 	ext{AC} - 	ext{Mem}[M]$
 
-1. **convert A = (A + B) - (C + D) - E to assembly**
+---
 
+### 2.2 Stack Architecture (0-Address Machine)
+- **Principle:** Operands are maintained in a **Last-In, First-Out (LIFO) Stack**, with a **Stack Pointer (SP)** tracking the Top of Stack (TOS). Arithmetic instructions operate implicitly on values popped from TOS (0-Address instructions).
+- **Basic Instructions:**
+  - `push M`: $	ext{Stack}[	ext{top}] \leftarrow 	ext{Mem}[M]$
+  - `pop M`: $	ext{Mem}[M] \leftarrow 	ext{Stack}[	ext{top}]$
+  - `add`: Pops top two elements, adds them, and pushes result back onto stack.
+  - `sub`: Pops top two elements ($	ext{Top-1} - 	ext{Top}$), subtracts them, and pushes result back onto stack.
+- *Examples:* Java Virtual Machine (JVM Bytecode), PostScript, Forth.
+
+**Example: Evaluating $C = A + B$ on Stack:**
 ```asm
-load A
-add B ; A + B
-store A ; A = A + B
-
-load C
-add D ; C + D
-store C ; C = C + D
-
-load A
-sub C ; A - C
-
-sub E ; A - C - E
-store A ; A = A - C - E
+push A              # Stack: [A]
+push B              # Stack: [A, B] (B is on top)
+add                 # Pops B, A -> Pushes (A + B) -> Stack: [A + B]
+pop C               # Mem[C] = A + B
 ```
 
-**Bangpun Model**
-A = (A + B) - (C + D) - E -> A = A + B - C - D - E
+---
 
+### 2.3 General-Purpose Register (GPR) Architectures
+- **Register-Memory (Intel x86):** Instructions can reference both registers and memory locations.
+- **Register-Register (ARM, MIPS, RISC-V):** ALU operations accept registers only; memory is accessed via explicit `load`/`store`.
+
+---
+
+## 3. Step-by-Step Expression Tracing
+
+### 📌 Problem: Implement $A = (A + B) - (C + D) - E$
+
+#### Method 1: Accumulator Architecture (Direct Approach)
 ```asm
-load A
-add B
-sub C
-sub D
-sub E
-store A
+load A              # AC = A
+add B               # AC = A + B
+store A             # Mem[A] = A + B (Temporary save)
+
+load C              # AC = C
+add D               # AC = C + D
+store C             # Mem[C] = C + D (Temporary save)
+
+load A              # AC = (A + B)
+sub C               # AC = (A + B) - (C + D)
+sub E               # AC = (A + B) - (C + D) - E
+store A             # Mem[A] = AC
 ```
 
-2. **convert A = (A + B) - (C + D) - E
+#### Method 2: Accumulator Architecture (Optimized / 6 Instructions)
+$$A = A + B - C - D - E$$
+```asm
+load A              # AC = A
+add B               # AC = A + B
+sub C               # AC = A + B - C
+sub D               # AC = A + B - C - D
+sub E               # AC = A + B - C - D - E
+store A             # Mem[A] = AC
+```
+
+---
+
+#### Method 3: Stack Architecture Execution
+```asm
+push A              # Stack: [A]
+push B              # Stack: [A, B]
+add                 # Stack: [A + B]
+
+push C              # Stack: [A + B, C]
+push D              # Stack: [A + B, C, D]
+add                 # Stack: [A + B, C + D]
+
+sub                 # Top-1 - Top -> (A + B) - (C + D), Stack: [(A + B) - (C + D)]
+
+push E              # Stack: [(A + B) - (C + D), E]
+sub                 # Top-1 - Top -> (A + B) - (C + D) - E, Stack: [Final Result]
+
+pop A               # Store Final Result in Mem[A]
+```
+
+---
+
+## 4. Architecture Comparison Matrix
+
+| Architecture | Operands per ALU Inst | Code Size | Hardware Complexity | Key Advantage | Key Limitation |
+| :--- | :---: | :---: | :---: | :--- | :--- |
+| **Stack** | 0 | Very Short | Low | Simple compiler code generation | TOS bottleneck; lower performance |
+| **Accumulator** | 1 | Medium | Very Low | Minimal hardware cost | High memory traffic |
+| **Register-Memory** | 2 | Short | Medium-High | Direct memory operations in ALU | Variable-length instructions |
+| **Register-Register** | 3 | Slightly Longer | Medium | Optimal pipelining & register reuse | Higher instruction count |
+
+---
+
+## 5. x86_64 Instructions
+
+>[!warning] S is source, D is destination (destination must be register)
+
+| Operation | Instruction | Meaning                                                                                                                                                                       |
+| --------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Copy      | mov S, D    | copy source -> destination                                                                                                                                                    |
+| Add       | add S, D    | D = D + S                                                                                                                                                                     |
+| Sub       | sub S, D    | D = D - S                                                                                                                                                                     |
+| Negative  | neg D       | D = -D                                                                                                                                                                        |
+| Multiply  | imul S, D   | D = D \* S                                                                                                                                                                    |
+| Divide    | idiv S      | %rax = %rdx:%rax / S<br>%rdx = %rdx:%rax % S<br>**(S must be register)**<br><br>==Result== of Divide will store in **%rax**<br>==Remainder== of Devide will store in **%rdx** |
+| Convert   | cqto        | Extend %rax to %rdx:%rax                                                                                                                                                      |
+| Increment | inc D       | D = D + 1                                                                                                                                                                     |
+| Decrement | dec D       | D = D - 1                                                                                                                                                                     |
+### To Validate Div use:
+$$
+\frac{(\%rdx+2^{64})+\%rax}{S}
+$$
+### Exercise 
+**Let %rax = 1, %rcx = 1024, and %rdx = 64. 
+Wrtie the output of the following instructions.** 
 
 ```asm
-push B ; stack [B]
-push A ; stack [B, A]
-add ; stack [A + B]
-pop A ; A = A + B
-
-push D ; stack [D]
-push C ; stack [D, C]
-add ; stack [C + D]
-pop C ; C = C + D
-
-push A ; stack [A]
-push C ; stack [A, C]
-push E ; stack [A, C, E]
-sub ; stack [A, C - E]
-sub ; stack [A - C - E]
-
-pop A ; A = A - C - E
+1. add %rcx,%rax => %rax = 1025
+2. neg %rax => %rax = 1025
+3. idiv %rcx => %rax = 1, %rdx = 1
 ```
+
+| Operation            | Instruction | Meaning                                                                                                                 |
+| -------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Bitwise And          | and S, D    | D = D & S                                                                                                               |
+| Bitwise Or           | sub S, D    | D = D \| S                                                                                                              |
+| Bitwise Xor          | xor S, D    | D = D ^ S                                                                                                               |
+| Bitwise Not          | not D       | D = ~D                                                                                                                  |
+| Left Shift           | shl S, D    | D = D << S<br>from `0010` -> `0100`<br>shift 1 time is mul by 2                                                         |
+| Unsigned Right Shift | shr S, D    | D = D >>> S<br>from `1001` -> `0100`<br>shift 1 time is div                                                             |
+| Signed Right Shift   | sar S, D    | D = D >> S<br>from `1001` -> `1100`<br>1. copy 1st bit from left<br>2. rm last bit out<br>3. push from left with copied |
+| Push                 | push S      | Push S on system stack                                                                                                  |
+| Pop                  | pop D       | Pop from system stack into D                                                                                            |
+
+---
+## 🔗 Related Notes & References
+- [[CS221]] — Main Course Index for Computer Architecture
+- [[Register Architectures]] — Register-Register vs. Register-Memory models
+- [[General Purpose]] — GPRs, integer representations, and addressing modes
+- [[Concurrency of CPU]] — Hardware pipelining and levels of parallelism
