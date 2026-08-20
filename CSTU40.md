@@ -2,7 +2,7 @@
 type: root_index
 title: CSTU40 - Computer Science Thammasat University (Cohort 40)
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-20
 ---
 
 # CSTU40 — Computer Science Curriculum Hub
@@ -57,7 +57,7 @@ CSTU40 (Root MOC)
 
 | รหัสวิชา | ชื่อวิชา (Course Title) | อาจารย์ผู้สอน (Instructor) | หมวดหมู่ | โน้ตการบรรยาย (Lectures) |
 | :--- | :--- | :--- | :--- | :--- |
-| **[[CS213]]** | Data Structure | — | Core CS | [[Introduction to Data Structure]], [[C++ Programming Language]] |
+| **[[CS213]]** | Data Structure | — | Core CS | [[Introduction to Data Structure]], [[C++ Programming Language]], [[Memory]] |
 | **[[CS221]]** | Computer Architecture | อ.เด่นดวง (Denduang) | Core CS | [[Concurrency of CPU]], [[Instructions]], [[Register Architectures]], [[General Purpose]] |
 | **[[CS240]]** | Data Science | อ.วนิดา & อ.ศตณัฐ | Core CS / Data | [[The Data Science]], [[Data Science Process]] |
 | **[[CS261]]** | Software Engineering | อ.ทรงศักดิ์ (Songsakdi) | Core CS | [[Introduction to Software Engineering]], [[Classified Software]], [[Cost of Development]] |
