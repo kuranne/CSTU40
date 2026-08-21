@@ -15,7 +15,7 @@ description: Fundamental concepts of Data Science, Data vs Information (DIKW Pyr
 
 > [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS240]] > [[The Data Science]]
 > **Related Notes:** [[Data Science Process]] \| [[CS240]]
-> **Reference:** `Docs/CS240_Week1_Principle_of_Data_Science.pdf`
+> **Reference:** `Private/Docs/CS240_Week1_Principle_of_Data_Science.pdf`
 
 ---
 

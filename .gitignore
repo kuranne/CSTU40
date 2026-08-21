@@ -3,6 +3,7 @@
 !*.*
 
 node_modules/
+.venv/
 .vscode/
 .DS_Store
 *.class
@@ -18,3 +19,4 @@ log/
 .agents/log/
 
 **/[Pp]rivate/**
+**/[Pp]rivate*.*

@@ -2,7 +2,7 @@
 type: root_index
 title: CSTU40 - Computer Science Thammasat University (Cohort 40)
 created: 2026-08-19
-updated: 2026-08-20
+updated: 2026-08-21
 ---
 
 # CSTU40 — Computer Science Curriculum Hub
@@ -59,7 +59,7 @@ CSTU40 (Root MOC)
 | :--- | :--- | :--- | :--- | :--- |
 | **[[CS213]]** | Data Structure | — | Core CS | [[Introduction to Data Structure]], [[C++ Programming Language]], [[Memory]] |
 | **[[CS221]]** | Computer Architecture | อ.เด่นดวง (Denduang) | Core CS | [[Concurrency of CPU]], [[Instructions]], [[Register Architectures]], [[General Purpose]] |
-| **[[CS240]]** | Data Science | อ.วนิดา & อ.ศตณัฐ | Core CS / Data | [[The Data Science]], [[Data Science Process]] |
+| **[[CS240]]** | Data Science | อ.วนิดา & อ.ศตณัฐ | Core CS / Data | [[The Data Science]], [[Data Science Process]], [[Type Of Data]] |
 | **[[CS261]]** | Software Engineering | อ.ทรงศักดิ์ (Songsakdi) | Core CS | [[Introduction to Software Engineering]], [[Classified Software]], [[Cost of Development]] |
 | **[[HS369]]** | History of Modern Japan | อ.นิภาภรณ์ (Niphaphon) | Free Elective | [[ภาพรวมประวัติศาสตร์ญี่ปุ่นร่วมสมัย]], [[ประวัติศาสตร์ของญี่ปุ่นหลังสงครามโลก]] |
 | **[[PY252]]** | Psychology | อ.โมนิน (Monin) | GenEd / Social | [[จิตวิทยาของมนุษย์]], [[ความสัมพันธ์ระหว่างบุคคล]], [[Self-expression Model]], [[Gender Difference]] |

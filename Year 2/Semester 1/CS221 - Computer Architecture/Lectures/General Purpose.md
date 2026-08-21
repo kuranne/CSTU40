@@ -17,7 +17,7 @@ description: Detailed study of General Purpose Integer Registers, Signed/Unsigne
 
 > [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS221]] > [[General Purpose]]
 > **Related Notes:** [[Instructions]] \| [[Register Architectures]] \| [[Concurrency of CPU]] \| [[CS221]]
-> **Reference:** `Docs/221_02.pdf`
+> **Reference:** `Private/Docs/221_02.pdf`
 
 ---
 
