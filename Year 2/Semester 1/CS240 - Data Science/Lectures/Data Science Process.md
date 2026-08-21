@@ -16,7 +16,7 @@ description: Comprehensive guide to the end-to-end Data Science Process (CRISP-D
 
 > [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS240]] > [[Data Science Process]]
 > **Related Notes:** [[The Data Science]] \| [[CS240]]
-> **Reference:** `Docs/CS240_Week1_Principle_of_Data_Science.pdf`
+> **Reference:** `Private/Docs/CS240_Week1_Principle_of_Data_Science.pdf`
 
 ---
 
