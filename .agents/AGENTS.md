@@ -131,7 +131,10 @@ The book/vault is organized chronologically by academic years and semesters. Fol
 │   └── *.agent.md                # Specialized custom agent personas (e.g., summarizer, organizer)
 └── .agents/                      # Shared workspace configurations (manifests, security policies, skills)
     ├── log/                      # Shared workspace change records and audit trails (*.log)
-    ├── skills/                   # Reusable agent skills and guidelines (e.g., obsidian-expert-skill.md)
+    ├── skills/                   # Reusable agent skills and domain guidelines
+    │   ├── obsidian-expert-skill.md # Master Obsidian authoring standard
+    │   ├── latex-math-skill.md      # Comprehensive LaTeX & MathJax mathematical notation guide
+    │   └── mermaid-diagram-skill.md # Complete Mermaid diagram specification & templates
     └── AGENTS.md                 # Master operational guidelines and repository architecture
 ```
 
