@@ -12,13 +12,22 @@ when_to_use: |
 license: MIT
 metadata:
   author: Gemini Notebook
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Obsidian Expert AI Agent Skill
 
 ## Purpose
 This skill provides an authoritative, complete, and spec-valid instruction set for writing, formatting, and structuring notes inside an Obsidian vault. It ensures coding agents respect visual, programmatic, and relational specifications of the Obsidian environment, ensuring maximum readability, accurate metadata, and flawless rendering.
+
+---
+
+## Modular Sub-Skills in `.agents/skills/`
+For specialized in-depth reference guides and advanced syntax rules, consult:
+- **`latex-math-skill.md`**: Complete reference for mathematical formulas, calculus, linear algebra, probability, matrices, and MathJax syntax.
+- **`mermaid-diagram-skill.md`**: Complete specification for Flowcharts, Sequence diagrams, Class diagrams, ERDs, State machines, and Git graphs.
+
+---
 
 ## Core Obsidian Specifications
 
@@ -78,24 +87,24 @@ The Dataview community plugin enables dynamic querying of note frontmatter and t
   - String comparisons must use double quotes.
   - Null checks should be performed using `!= null` or `!= undefined`.
 
-### 5. Mermaid Diagrams
+### 5. Mermaid Diagrams (See `mermaid-diagram-skill.md` for full spec)
 Obsidian natively supports Mermaid diagrams to visualize concepts, flows, and relationships.
 - **Fenced Blocks**: Fenced using ````mermaid` blocks.
-- **Key Diagram Types & Openers**:
-  - Flowchart: `flowchart TD` (Top-Down) or `flowchart LR` (Left-to-Right).
-  - Sequence Diagram: `sequenceDiagram` for sequential interactions.
-  - Entity-Relationship: `erDiagram` for data models and schemas.
-  - State Diagram: `stateDiagram-v2` for lifecycles and states.
-  - Gantt Chart: `gantt` for timelines.
-  - Class Diagram: `classDiagram` for structural relationships.
+- **Key Diagram Types**:
+  - Flowcharts: `flowchart TD` (Top-Down) or `flowchart LR` (Left-to-Right).
+  - Sequence Diagrams: `sequenceDiagram` for message flows.
+  - Class Diagrams: `classDiagram` for OOP architectures.
+  - Entity-Relationship: `erDiagram` for relational database schemas.
+  - State Diagrams: `stateDiagram-v2` for state machines.
+  - Git Graphs: `gitGraph` for version control timelines.
 
-### 6. MathJax & LaTeX Notation
+### 6. MathJax & LaTeX Notation (See `latex-math-skill.md` for full spec)
 LaTeX mathematical expressions are rendered natively in Obsidian.
 - **Inline Math**: Wrapped in single dollar signs `$E = mc^2$`. Do not leave spaces between the dollar signs and the math content (e.g., write `$x_2$` not `$ x_2 $`).
 - **Block Math**: Wrapped in double dollar signs `$$` on separate lines:
   ```latex
   $$
-  f(x) = \int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d\xi
+  f(x) = \int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} \, d\xi
   $$
   ```
 
@@ -151,3 +160,5 @@ Before finalizing your work, programmatically or textually check:
 2. **Dataview Check**: Are property keys named exactly as expected in the query? (Remember, Dataview is case-sensitive).
 3. **Wikilink Verification**: Do all `[[Note Name]]` links target valid, existing files or are they intended to be placeholder red links?
 4. **Callout Rendering**: Are all callout blocks correctly prepended with `>` and a space? Is the syntax exactly `> [!type]` with the correct type identifier?
+5. **LaTeX Rendering**: Are all single-dollar inline equations formatted with no space adjacent to the `$`?
+6. **Mermaid Validation**: Are all node labels containing special characters enclosed in double quotes `["..."]`?
