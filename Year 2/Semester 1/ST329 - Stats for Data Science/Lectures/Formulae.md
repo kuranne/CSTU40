@@ -24,4 +24,7 @@ $P(B_k|A) = \frac{P(B_k)P(A|B_k)}{\sum_{i=1}^n P(B_i)P(A|B_i)}$
 
 ### Independence
 
-When $A$ and $B$ is $P(B|A)=P(B)$ or $P(A|B) = P(A)$ 
+$A$ and $B$ is **independence** to each other when can proofed:
+- $P(B|A)=P(B)$ or $P(A|B) = P(A)$ .
+- $P(A \cap B) = P(A)P(B)$
+
