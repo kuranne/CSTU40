@@ -84,39 +84,47 @@ The book/vault is organized chronologically by academic years and semesters. Fol
 │   ├── Career/                   # Professional development, internships, and networking
 │   └── Semester 1/               # Year 2, Semester 1 Course vaults
 │       ├── CS213 - Data Structure/
-│       │   ├── Docs/             # Pointer, array, and structures PDFs
 │       │   ├── Labs/             # C++ class code practices (Counter, Robot, IntCell)
-│       │   └── Lectures/         # C++ language and memory layout notes (Ignore non-class-code)
+│       │   ├── Lectures/         # C++ language and memory layout notes (Ignore non-class-code)
+│       │   └── Private/          # Protected university assets (Gitignored via **/[Pp]rivate/**)
+│       │       └── Docs/         # Pointer, array, and structures PDFs
 │       │
 │       ├── CS221 - Computer Architecture/
 │       │   ├── Assets/           # Screenshot walkthroughs of memory/register architectures
-│       │   ├── Docs/             # Microarchitecture and ISA reference PDFs
 │       │   ├── Labs/             # C compiles, ARM, and x86 Assembly code implementations
-│       │   └── Lectures/         # Register architecture and concurrency notes (Ignore non-class-code)
+│       │   ├── Lectures/         # Register architecture and concurrency notes (Ignore non-class-code)
+│       │   └── Private/          # Protected university assets (Gitignored via **/[Pp]rivate/**)
+│       │       └── Docs/         # Microarchitecture and ISA reference PDFs
 │       │
 │       ├── CS240 - Data Science/
 │       │   ├── Assets/           # Sepsis data files and modeling sheets
 │       │   ├── Assignments/      # Jupyter Notebooks and pages data cleansing
-│       │   ├── Docs/             # Principles of Data Science slides (PDF)
 │       │   ├── Labs/             # Python structure, NumPy, and Pandas cleansing Notebooks
-│       │   └── Lectures/         # Data processes and workflows (CS240.md - Ignore non-class-code)
+│       │   ├── Lectures/         # Data processes and workflows (CS240.md - Ignore non-class-code)
+│       │   └── Private/          # Protected university assets (Gitignored via **/[Pp]rivate/**)
+│       │       └── Docs/         # Principles of Data Science slides (PDF)
 │       │
 │       ├── CS261 - Software Engineering/
-│       │   ├── Docs/             # Design and architecture PDFs
-│       │   └── Lectures/         # Cost of development and linter notes (Ignore non-class-code)
+│       │   ├── Lectures/         # Cost of development and linter notes (Ignore non-class-code)
+│       │   └── Private/          # Protected university assets (Gitignored via **/[Pp]rivate/**)
+│       │       └── Docs/         # Design and architecture PDFs
 │       │
 │       ├── HS369 - History of Modern Japan/
 │       │   ├── Assets/           # Historical map screenshots and photos of Hiroshima
-│       │   ├── Docs/             # Contemporary Japanese history materials
-│       │   └── Lectures/         # Post-war Japan notes (HS369.md - Ignore non-class-code)
+│       │   ├── Lectures/         # Post-war Japan notes (HS369.md - Ignore non-class-code)
+│       │   └── Private/          # Protected university assets (Gitignored via **/[Pp]rivate/**)
+│       │       └── Docs/         # Contemporary Japanese history materials
 │       │
 │       ├── PY252 - Psychology/
 │       │   ├── Assets/           # Conceptual graphs and templates
-│       │   ├── Docs/             # Human needs, motivation, and difference models (PDFs)
-│       │   └── Lectures/         # Gender differences and human relationships notes (Ignore non-class-code)
+│       │   ├── Lectures/         # Gender differences and human relationships notes (Ignore non-class-code)
+│       │   └── Private/          # Protected university assets (Gitignored via **/[Pp]rivate/**)
+│       │       └── Docs/         # Human needs, motivation, and difference models (PDFs)
 │       │
 │       └── ST329 - Stats for Data Science/
-│           └── Lectures/         # Probability theory notes (ST329.md - Ignore non-class-code)
+│           ├── Lectures/         # Probability theory notes (ST329.md - Ignore non-class-code)
+│           └── Private/          # Protected university assets (Gitignored via **/[Pp]rivate/**)
+│               └── Docs/         # Probability theory lecture PDFs
 │
 ├── .agent/                       # Local directory for agent-specific profiles and memory
 │   ├── log/                      # Local agent runtime execution and session logs (*.log)
@@ -146,7 +154,7 @@ When asked to summarize courses, notes, or codebases, follow these strict parame
 When asked to clean up, structure, index, or link files in the vault:
 *   **Knowledge-Graph Mapping**: Proactively connect related topics together across semesters or courses. For example:
     *   Link `CS213 - Data Structure/` back to foundational C coding in `CS102 - Basic Programming/`.
-    *   Link `CS240 - Data Science/` concepts to statistics in `ST329 - Stats for Data Science/``.
+    *   Link `CS240 - Data Science/` concepts to statistics in `ST329 - Stats for Data Science/`.
     *   Always write these connections using Obsidian wikilink syntax: `[[Note Name]]` or alias links `[[Note Name|Display Label]]`.
 *   **Obsidian-Expert Standards**: All notes must be written in strict compliance with the **Obsidian Expert AI Agent Skill** (`obsidian-expert-skill.md`). This includes:
     *   Adding properly typed YAML frontmatter properties enclosed in triple-dashes (`---`) at the top of each `.md` file.
@@ -165,15 +173,21 @@ You are not a passive, static observer in this repository. You are fully authori
 *   **YAML Metadata Integrity**: Ensure any frontmatter inside `.agent.md` or configuration YAML files conforms to strict specifications, utilizing lowercase-with-hyphens naming for files.
 
 ### 4. Changelog & Execution Logging Method (`store latest changelog in ./agent(s)/log/*.log`)
-To maintain operational traceability, historical auditing, and context continuity across automated workflows, agents must log all major operations and store the latest changelogs under `./.agent/log/*.log` or `./.agents/log/*.log`:
+To maintain operational traceability, historical auditing, and seamless rollback capability across automated workflows, agents must commit changes prior to logging and attach the resulting Git commit hash (SHA) to each log record:
 
+*   **Execution & Commit-Before-Logging Workflow**:
+    1. **Execute Changes**: Perform file creations, modifications, refactoring, or re-linking in the vault.
+    2. **Git Commit Before Logging**: Stage and commit all mutated files to Git using a descriptive, structured commit message (e.g. `git add <files>` and `git commit -m "<action>: <summary>"`).
+    3. **Extract Commit SHA**: Retrieve the generated Git commit hash / SHA (e.g. `git rev-parse HEAD` or short SHA `git rev-parse --short HEAD`).
+    4. **Record Log with Commit SHA**: Write/append the structured changelog entry into `.agent/log/*.log` and `.agents/log/changelog.log`, including the `COMMIT SHA` field for rollback tracking.
 *   **Log Storage & Naming Conventions**:
     *   **Agent & Task Session Logs**: Record individual execution runs in `.agent/log/` using timestamped filenames: `YYYY-MM-DD_<agent_or_task>.log` (e.g., `.agent/log/2026-08-20_vault_organizer.log`, `.agent/log/2026-08-20_summarizer.log`).
     *   **Repository-Wide Changelog**: Append continuous chronological repository changes into `.agents/log/changelog.log` or `.agent/log/latest.log`.
-*   **Standard Log Format**: Each log entry must adhere to the following structured format:
+*   **Standard Log Format**: Each log entry must adhere to the following structured format containing the `COMMIT SHA`:
     ```log
     ================================================================================
     TIMESTAMP   : [YYYY-MM-DDTHH:mm:ssZ / Local ISO timestamp]
+    COMMIT SHA  : [Git commit hash, e.g., a1b2c3d or full 40-character SHA]
     OPERATOR    : [Active Agent Persona, e.g., organizer.agent.md / summarizer.agent.md]
     ACTION TYPE : [ORGANIZE | SUMMARIZE | TRANSLATE | LINK | REFACTOR | CONFIG_UPDATE]
     TARGETS     :
@@ -187,10 +201,13 @@ To maintain operational traceability, historical auditing, and context continuit
     ERRORS/NOTES: [None | Specific warning or error details]
     ================================================================================
     ```
+*   **Rollback Mechanism**:
+    *   Because each log entry explicitly specifies the `COMMIT SHA`, any operation can be inspected (`git show <COMMIT_SHA>`) or quickly rolled back (`git revert <COMMIT_SHA>` or `git checkout <COMMIT_SHA>~1 -- <files>`) with full precision.
 *   **Operational Logging Rules**:
-    *   **Atomic Logging**: Append an updated changelog entry to the relevant `.log` file immediately upon completing any batch of file additions, modifications, or reorganizations.
+    *   **Atomic Logging**: Append an updated changelog entry to the relevant `.log` file immediately upon completing and committing any batch of file additions, modifications, or reorganizations.
     *   **Privacy & Secret Redaction**: Never write raw credential strings, private certificates, or personal identity information from `Assets/Private/` into log files.
     *   **Git Integration**: All log files (`*.log`) and log directories (`log/`) under `.agent/` and `.agents/` are strictly ignored by Git via `.gitignore` to keep version history clean while preserving local operational logs.
+    *   **Log Managing**: When the number of log in changelog reach or exceed 16, use `tar -cJf` to compress them. Use ISO8601 timestamp keep them on `.agents/log/`. And after number of compress reach or exceed 16, delete the older else.
 
 ---
 
@@ -201,6 +218,8 @@ To maintain operational traceability, historical auditing, and context continuit
     *   Create symlinks/hardlinks for any asset that belongs in multiple locations.
     *   Preserve original languages and writing styles when generating summaries.
     *   Update this `AGENTS.md` file if the directory structure changes or new courses are added.
+    *   **University Assets & Copyright Protection**: Store all university lecture slide decks, official course handouts, PDFs, and instructor materials under `<Class>/Private/Docs/` so they remain protected by the `**/[Pp]rivate/**` gitignore pattern.
+    *   **Commit Before Logging**: Always commit mutated files to Git before recording logs, and include the generated `COMMIT SHA` in the log entry for easy rollback.
     *   Append latest changelogs and operational records to `.agent/log/*.log` or `.agents/log/*.log` after mutating operations.
 *   ⚠️ **Ask First**:
     *   Before performing bulk folder restructures outside of Year/Semester groupings.
