@@ -25,4 +25,6 @@ graph RL;
 
 To response the customer's requirements, must following **Bespoke Software Projects** which is the most popular in today works.
 
-Next is **COTS(Commercial of-the-shelf Software Projects)** like DIYs, you just bring some part from that those or these together(or create a new one) to produce a software. the one most of pros from this method is 
+Next is **COTS(Commercial of-the-shelf Software Projects)** like DIYs, you just bring some part from that those or these together(or create a new one) to produce a software. the one most of pros from this method is the project would be followed standard.
+
+>[!tip] Split a Big Project into a lot of small projects, to increase success chance.
