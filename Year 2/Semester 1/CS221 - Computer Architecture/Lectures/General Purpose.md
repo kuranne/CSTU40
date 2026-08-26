@@ -58,6 +58,7 @@ In Two's Complement signed representation, the Most Significant Bit (MSB) acts a
 2. Add 1: `1010` + `0001` = `1011` (Two's Complement, value $-5$)
 
 **8-bit Sample Values:**
+
 | Binary Pattern | Unsigned Decimal | Signed Decimal (Two's Complement) |
 | :--- | :--- | :--- |
 | `0000 0000` | $0$ | $0$ |
@@ -125,15 +126,15 @@ Where:
 - $R_i$ = Index Register (any GPR *except `%rsp`*)
 - $s$ = Scale Factor ($1, 2, 4,$ or $8$)
 
-| Syntax Form | Effective Address Computation | Example | Description |
-| :--- | :--- | :--- | :--- |
-| `Imm` | $	ext{Imm}$ | `$0x400580` | Absolute Memory Address |
-| `(Rb)` | $	ext{Reg}[R_b]$ | `(%rax)` | Register Indirect (Dereferences address in `%rax`) |
-| `D(Rb)` | $D + 	ext{Reg}[R_b]$ | `8(%rbp)` | Base + Displacement (Local variables / Struct offset) |
-| `(Rb, Ri)` | $	ext{Reg}[R_b] + 	ext{Reg}[R_i]$ | `(%rax, %rdx)` | Base + Index |
-| `D(Rb, Ri)` | $D + 	ext{Reg}[R_b] + 	ext{Reg}[R_i]$ | `4(%rax, %rdx)` | Base + Index + Displacement |
-| `(Rb, Ri, s)` | $	ext{Reg}[R_b] + 	ext{Reg}[R_i] 	imes s$ | `(%rax, %rcx, 4)` | Indexed array access (4-byte elements / `int[]`) |
-| `D(Rb, Ri, s)` | $D + 	ext{Reg}[R_b] + 	ext{Reg}[R_i] 	imes s$ | `8(%rax, %rcx, 8)` | Indexed array access with header displacement |
+| Syntax Form    | Effective Address Computation                 | Example            | Description                                           |
+| :------------- | :-------------------------------------------- | :----------------- | :---------------------------------------------------- |
+| `Imm`          | $ext{Imm}$                                    | `$0x400580`        | Absolute Memory Address                               |
+| `(Rb)`         | $ext{Reg}[R_b]$                               | `(%rax)`           | Register Indirect (Dereferences address in `%rax`)    |
+| `D(Rb)`        | $D + 	ext{Reg}[R_b]$                          | `8(%rbp)`          | Base + Displacement (Local variables / Struct offset) |
+| `(Rb, Ri)`     | $ext{Reg}[R_b] + 	ext{Reg}[R_i]$              | `(%rax, %rdx)`     | Base + Index                                          |
+| `D(Rb, Ri)`    | $D + 	ext{Reg}[R_b] + 	ext{Reg}[R_i]$         | `4(%rax, %rdx)`    | Base + Index + Displacement                           |
+| `(Rb, Ri, s)`  | $ext{Reg}[R_b] + 	ext{Reg}[R_i] 	imes s$      | `(%rax, %rcx, 4)`  | Indexed array access (4-byte elements / `int[]`)      |
+| `D(Rb, Ri, s)` | $D + 	ext{Reg}[R_b] + 	ext{Reg}[R_i] 	imes s$ | `8(%rax, %rcx, 8)` | Indexed array access with header displacement         |
 
 ### Notable Idiomatic Instructions:
 ```asm
