@@ -198,6 +198,7 @@ idiv %rcx ; %rax = 1, %rdx = 1
 | **Push**                 | push S      | Push S on system stack                                                                                                    |
 | **Pop**                  | pop D       | Pop from system stack into D                                                                                              |
 
+
 ---
 ## 🔗 Related Notes & References
 - [[CS221]] — Main Course Index for Computer Architecture
