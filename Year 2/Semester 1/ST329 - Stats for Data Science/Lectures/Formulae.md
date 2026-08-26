@@ -4,6 +4,8 @@ description: All Formulae appeared during studies ST329
 ---
 # Formulae
 
+# Subject 1
+
 <span style="font-size: 0.9rem; font-weight: bold">Probability</span> $P(A) = \frac{n(A) = Interesting\ Event}{n(S) = Sample\ Space}$ 
 ### Conditional Probability
 
@@ -28,3 +30,6 @@ $A$ and $B$ is **independence** to each other when can proofed:
 - $P(B|A)=P(B)$ or $P(A|B) = P(A)$ .
 - $P(A \cap B) = P(A)P(B)$
 
+# Subject 2, Random Variables
+
+Random Variable: $X: S$ —> $R$
