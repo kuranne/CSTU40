@@ -198,6 +198,47 @@ idiv %rcx ; %rax = 1, %rdx = 1
 | **Push**                 | push S      | Push S on system stack                                                                                                    |
 | **Pop**                  | pop D       | Pop from system stack into D                                                                                              |
 
+### Compare & Jump Instructions
+
+| Operation              | Instruction               | Meaning                                                                                                                            |
+| ---------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Compare**            | cmp S, D                  | Calculate $D - S$ and set the condition flags without storing the result. including CF(Carrier flag); SF(Sign flag); ZF(Zero flag) |
+| **Test**               | test S, D                 | Calculate $D \& S$ and set the condition flags without storing the result typically used to check the value in a register          |
+| **Unconditional Jump** | jmp L                     | Jump to Label $L$                                                                                                                  |
+| **Conditional Jump**   | je, jne, jg, jge, jl, jle | Jump when flags is true.                                                                                                           |
+
+### Example
+
+#### Condition if-else
+```asm
+.global ifelse
+.text
+ifelse:
+	mov $100, %rax
+	cmp $100, %rax
+	je L1
+	jmp LE ; Must make this *********
+
+L1: // do this if %rax is equal 100
+LE: // do this anycondition
+```
+
+#### Loop
+```asm
+.global loop
+.text
+loop:
+	movq $1, %rdx
+	xor %rax, %rax
+	cmp %rdi, %rdx    ; exit loop if rdx > rdi like: while (%rdx < %rdi)
+	jg done
+	add %rdx, %rax
+	addq $1, %rdx
+	jmp loop
+	
+done:
+	ret
+```
 
 ---
 ## 🔗 Related Notes & References

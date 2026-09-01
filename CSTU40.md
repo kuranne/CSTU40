@@ -2,7 +2,7 @@
 type: root_index
 title: CSTU40 - Computer Science Thammasat University (Cohort 40)
 created: 2026-08-19
-updated: 2026-08-21
+updated: 2026-08-27
 ---
 
 # CSTU40 — Computer Science Curriculum Hub
@@ -37,7 +37,7 @@ CSTU40 (Root MOC)
         ├── [[CS221]] — Computer Architecture
         ├── [[CS240]] — Data Science
         ├── [[CS261]] — Software Engineering
-        ├── [[HS369]] — History of Modern Japan
+        ├── [[HS369]] — History of Contemporary Japan
         ├── [[PY252]] — Psychology
         └── [[ST329]] — Stats for Data Science
 ```
@@ -55,15 +55,15 @@ CSTU40 (Root MOC)
 
 ## 🎯 สรุปภาพรวมรายวิชา Year 2 Semester 1 (ปัจจุบัน)
 
-| รหัสวิชา      | ชื่อวิชา (Course Title) | อาจารย์ผู้สอน (Instructor) | หมวดหมู่       | โน้ตการบรรยาย (Lectures)                                                                              |
-| :------------ | :---------------------- | :------------------------- | :------------- | :---------------------------------------------------------------------------------------------------- |
-| **[[CS213]]** | Data Structure          | —                          | Core CS        | [[Introduction to Data Structure]], [[C++ Programming Language]], [[Memory]]                          |
-| **[[CS221]]** | Computer Architecture   | อ.เด่นดวง (Denduang)       | Core CS        | [[Concurrency of CPU]], [[Instructions]], [[Register Architectures]], [[General Purpose]]             |
-| **[[CS240]]** | Data Science            | อ.วนิดา & อ.ศตณัฐ          | Core CS / Data | [[The Data Science]], [[Data Science Process]], [[Type Of Data]]                                      |
-| **[[CS261]]** | Software Engineering    | อ.ทรงศักดิ์ (Songsakdi)    | Core CS        | [[Introduction to Software Engineering]], [[Classified Software]], [[Cost of Development]]            |
-| **[[HS369]]** | History of Modern Japan | อ.นิภาภรณ์ (Niphaphon)     | Free Elective  | [[ภาพรวมประวัติศาสตร์ญี่ปุ่นร่วมสมัย]], [[ประวัติศาสตร์ของญี่ปุ่นหลังสงครามโลก]]                      |
-| **[[PY252]]** | Psychology              | อ.โมนิน (Monin)            | GenEd / Social | [[จิตวิทยาของมนุษย์]], [[ความสัมพันธ์ระหว่างบุคคล]], [[Self-expression Model]], [[Gender Difference]] |
-| **[[ST329]]** | Stats for Data Science  | อ.มณฑิรา (Monthira)        | Math & Stats   | [[Formulae]]                                                                                          |
+| รหัสวิชา | ชื่อวิชา (Course Title) | อาจารย์ผู้สอน (Instructor) | หมวดหมู่ | โน้ตการบรรยาย (Lectures) |
+| :--- | :--- | :--- | :--- | :--- |
+| **[[CS213]]** | Data Structure | อ.ฐาปนา (Thapana) | Core CS | [[Introduction to Data Structure]], [[C++ Programming Language]], [[Memory]] |
+| **[[CS221]]** | Computer Architecture | อ.เด่นดวง (Denduang) | Core CS | [[Concurrency of CPU]], [[Instructions]], [[Register Architectures]], [[General Purpose]], [[Assembly]], [[Exercise]] |
+| **[[CS240]]** | Data Science | อ.วนิดา & อ.ศตณัฐ | Core CS / Data | [[The Data Science]], [[Data Science Process]], [[Type Of Data]] |
+| **[[CS261]]** | Software Engineering | อ.ทรงศักดิ์ (Songsakdi) | Core CS | [[Introduction to Software Engineering]], [[Classified Software]], [[Cost of Development]], [[Software Process]], [[System Engineer]] |
+| **[[HS369]]** | History of Contemporary Japan | อ.นิภาภรณ์ (Niphaphon) | Free Elective | [[ภาพรวมประวัติศาสตร์ญี่ปุ่นร่วมสมัย]], [[จักรพรรดิและราชวงศ์ในญีปุ่น]], [[ประวัติศาสตร์ของญี่ปุ่นหลังสงครามโลก]], [[ญี่ปุ่นหลังแพ้สงคราม]] |
+| **[[PY252]]** | Psychology | อ.โมนิน (Monin) | GenEd / Social | [[จิตวิทยาของมนุษย์]], [[ความสัมพันธ์ระหว่างบุคคล]], [[Self-expression Model]], [[Gender Difference]] |
+| **[[ST329]]** | Stats for Data Science | อ.มณฑิรา (Monthira) | Math & Stats | [[Formulae]], [[Random Variables]] |
 
 ---
 
