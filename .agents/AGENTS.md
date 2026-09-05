@@ -84,13 +84,15 @@ The book/vault is organized chronologically by academic years and semesters. Fol
 │   ├── Career/                   # Professional development, internships, and networking
 │   └── Semester 1/               # Year 2, Semester 1 Course vaults
 │       ├── CS213 - Data Structure/
-│       │   ├── Labs/             # C++ class code practices (Counter, Robot, IntCell)
+│       │   ├── Assets/           # Visual assets and memory/node diagrams
+│       │   ├── Labs/             # C++ class code practices (Counter, Robot, IntCell, linked_list)
 │       │   ├── Lectures/         # C++ language and memory layout notes (Ignore non-class-code)
 │       │   └── Private/          # Protected university assets (Gitignored via **/[Pp]rivate/**)
 │       │       └── Docs/         # Pointer, array, and structures PDFs
 │       │
 │       ├── CS221 - Computer Architecture/
 │       │   ├── Assets/           # Screenshot walkthroughs of memory/register architectures
+│       │   ├── Assignment/       # Assembly routines and implementations (fibonaci, odd_or_even)
 │       │   ├── Labs/             # C compiles, ARM, and x86 Assembly code implementations
 │       │   ├── Lectures/         # Register architecture and concurrency notes (Ignore non-class-code)
 │       │   └── Private/          # Protected university assets (Gitignored via **/[Pp]rivate/**)
@@ -98,13 +100,14 @@ The book/vault is organized chronologically by academic years and semesters. Fol
 │       │
 │       ├── CS240 - Data Science/
 │       │   ├── Assets/           # Sepsis data files and modeling sheets
-│       │   ├── Assignments/      # Jupyter Notebooks and pages data cleansing
-│       │   ├── Labs/             # Python structure, NumPy, and Pandas cleansing Notebooks
+│       │   ├── Assignments/      # Jupyter Notebooks (Basic Data Structures, NumPy & Pandas)
+│       │   ├── Labs/             # Python structure, NumPy, Pandas, Data Cleansing, EDA Notebooks
 │       │   ├── Lectures/         # Data processes and workflows (CS240.md - Ignore non-class-code)
 │       │   └── Private/          # Protected university assets (Gitignored via **/[Pp]rivate/**)
 │       │       └── Docs/         # Principles of Data Science slides (PDF)
 │       │
 │       ├── CS261 - Software Engineering/
+│       │   ├── Labs/             # Docker containerization setups and practice
 │       │   ├── Lectures/         # Cost of development and linter notes (Ignore non-class-code)
 │       │   └── Private/          # Protected university assets (Gitignored via **/[Pp]rivate/**)
 │       │       └── Docs/         # Design and architecture PDFs
