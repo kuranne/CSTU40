@@ -1,0 +1,55 @@
+@startuml Deployment_Diagram
+
+title Deployment Diagram - 3-Container Web Application
+
+skinparam componentStyle rectangle
+skinparam node {
+    BackgroundColor White
+    BorderColor Black
+}
+
+actor "เจ้าหน้าที่ฝ่ายวิชาการภาควิชาคอมพิวเตอร์" as user
+
+node "Client Browser" {
+    artifact "Frontend Web App\n(HTML, CSS, JavaScript)" as frontend
+}
+
+node "Docker Host" {
+
+    node "Container: nodejs\n(port 3000)" as nodejsContainer {
+        component "Node.js Web App" as nodeApp
+    }
+
+    node "Container: tomcat\n(port 8081)" as tomcatContainer {
+        component "Java Spring Boot\nREST API" as springApi
+    }
+
+    node "Container: db\n(port 1433)" as dbContainer {
+        database "MS SQL Server\n(AppDB)" as mssql
+    }
+
+    nodejsContainer -[hidden]right- tomcatContainer
+    tomcatContainer -[hidden]right- dbContainer
+}
+
+user --> frontend : HTTPS
+frontend --> nodeApp : HTTP\n(serves static content /\ncalls Node.js endpoints)
+frontend --> springApi : HTTPS/REST\n(calls Java REST APIs)
+nodeApp --> mssql : JDBC/TCP :1433\n(network: app-network)
+springApi --> mssql : JDBC/TCP :1433\n(network: app-network)
+
+note right of dbContainer
+  Docker named volume
+  "mssql-data" persists
+  data across restarts
+end note
+
+note bottom of nodejsContainer
+  Docker network "app-network"
+  connects all 3 containers.
+  Services reach each other
+  by container/service name
+  (db, tomcat, nodejs).
+end note
+
+@enduml

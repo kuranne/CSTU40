@@ -300,6 +300,60 @@ def clean_dataset(raw_df: pd.DataFrame) -> pd.DataFrame:
 
 ---
 
+# Categorical Attributes
+
+One that has a set-valued domain composed of a set of symbols. Such as Gender = {M,F}, Education = {High School, BS, MS, PhD}, etc.
+
+> [!faq] Most of Machine learning algorithms can not handle categorical variables.
+
+To manage the categorical attributes, do convert data to number or numerical data.
+
+## Encoding of Categorical Dat
+
+Map each category to a vector that contains 1 ( presence of the feature ) and 0 ( absence of the feature )
+
+### Nominal variable 
+
+- One-hot encoding is where you represent each possible value for a category as a separate feature. 
+- Map each category to a vector that contains 1 (presence of the feature) and 0 (absence of the feature )
+
+| Gender | isMale | isFemale | isOther |
+| ------ | ------ | -------- | ------- |
+| Male   | 1      | 0        | 0       |
+| Female | 0      | 1        | 0       |
+| Other  | 0      | 0        | 1       |
+
+### Ordinal encoding
+
+- The encoding of variables retains the ordinal nature of the variable
+- Each category is assigned a value from 1 through the number of possible values by considering the order of values.
+
+| Feeling  | Temporator |
+| -------- | ---------- |
+| Cold     | 1          |
+| Warm     | 2          |
+| Hot      | 3          |
+| Very Hot | 4          |
+
+---
+## Why Is Data Quality Important?
+
+When collected data fails to meet the company expectations of **accuracy, validity, completeness, and consistency**, it can have ==massive negative impacts== on customer service, employee productivity, and key strategies.
+
+By tracking data quality, a business can ==pinpoint potential issues harming quality==, and ensure that shared data is fit to be used for a given purpose.
+
+The quality of data is determined by factors such as accuracy, completeness, reliability, relevance and how ==up to date== it is.
+
+> [!note] The Data Should Be
+> - **Accurate** and Precise 
+> - **Complete** — Does not have "unknown" or "missing" values
+> - **Consistency** — Two data items in the data set contradict each other 
+> - **Valid** — Conform to defined business rules or constraints 
+> - **Uniform** — Using the same units of measure in all systems 
+> - **Unique** — Does not contain duplicates
+
+---
+
 ## 8. Summary Checklist for Clean Data
 
 > [!check] Data Validation Heuristics (Ready for Machine Learning):
