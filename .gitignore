@@ -21,4 +21,7 @@ log/
 **/[Pp]rivate/**
 **/[Pp]rivate*.*
 **/Project/**
+.run_cache/
+**/.run_cache/**
+
 
