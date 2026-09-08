@@ -6,7 +6,7 @@ assign:
     mov %rdi, %rax
     //
     // 2.
-    cqto
+    xor %rdx, %rdx
     //
     // 3.
     mov $2, %r10
