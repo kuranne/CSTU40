@@ -18,7 +18,7 @@ int main() {
     FILE *goodsf, *reportf;
 
     if ((goodsf = fopen("goods.txt", "r")) == NULL) return 1;
-    if ((reportf = fopen("Report6800000000.txt", "w")) == NULL) {
+    if ((reportf = fopen("Report.txt", "w")) == NULL) {
         fclose(goodsf);
         return 1;
     }
