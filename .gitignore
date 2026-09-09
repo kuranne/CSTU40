@@ -11,6 +11,9 @@ node_modules/
 *.o
 *.so
 *.exe
+.env*
+mise.toml
+*.csv
 
 *.log
 log/
