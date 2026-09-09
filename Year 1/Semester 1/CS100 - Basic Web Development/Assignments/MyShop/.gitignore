@@ -1,0 +1,37 @@
+#--- System ---#
+# OSX
+.DS_STORE
+# NT
+Thumbs.db
+
+#--- tool ---#
+.vscode/
+.git/
+.gsc.config
+
+#--- Python ---#
+.venv/
+build/
+dist/
+
+#--- Java ---#
+.class
+
+#--- executeable ---#
+*.exe
+*.app
+*.out
+
+#--- Temporary ---#
+*.log
+*.tmp
+
+#--- Private ---#
+private_*
+
+#--- Rust ---#
+Cargo.*
+target/
+
+# gsc Script
+.gsc.config
