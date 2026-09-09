@@ -63,3 +63,5 @@ If $X$ is a random variable with cumulative distribution function $F(x)$, the fo
 
 3. **Right-Continuity:**
    $$\lim_{x 	o x_0^+} F(x) = F(x_0), \quad \forall x_0 \in \mathbb{R}$$
+
+---
