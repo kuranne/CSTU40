@@ -98,3 +98,29 @@ shr $4, %rcx  = 0000 0100 0000 (64 = 1024 / 16; or 128 if starting from 2048)
 	**flags:** ==ZF(0), SF(1), CF(0)==
 
 ---
+
+### 6. Show how to execute the following program composing of two instructions as shown below.
+
+Here, let $\%rax=4, \%rcx=0x4000, and\text{ }PC=0x0$
+
+| Address | Assembly              | Machine Code           |
+| ------- | --------------------- | ---------------------- |
+| 0       | `rmmov %rax, 4(%rcx)` | `40010000000000000004` |
+| 10      | `irmov $8, %rcx`      | `30F10000000000000008` |
+
+**fetch:**
+	$let\text{ }PC = 0$
+	$icode:ifun \leftarrow M_1[PC]$
+	$rA:rB \leftarrow M_1[PC+1]$
+	$valC \leftarrow M_8[PC+2]$
+	$valP \leftarrow PC + 10$
+**decode:**
+	$valB \leftarrow R[rB]$
+**execute:**
+	$valE \leftarrow valB + valC$
+**memory:**
+	$valM \leftarrow M_8[valE]$
+**write-back:**
+	$R[rA] \leftarrow valM$
+**PC Update:**
+	$PC \leftarrow valP$
