@@ -52,3 +52,6 @@ Binary search uses the attribute of an ordered (sorted) data set. The method wil
 
 > [!tip] Time Complexity
 > This method has Big-O complexity of $\mathcal{O}(\log n)$.
+
+---
+
