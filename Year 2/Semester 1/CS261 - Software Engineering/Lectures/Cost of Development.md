@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Software Development Economics & Maintenance Cost Analysis
-course_code: CS261
+class: CS261
 week: 3
 tags:
   - software-engineering
@@ -10,11 +10,11 @@ tags:
   - software-economics
   - boehm-curve
 description: Economic breakdown of software lifecycle costs, development phase distributions, the 4 types of maintenance, and key cost drivers.
+parent: "CS261"
 ---
 
-# 💰 Software Development Economics & Maintenance Cost Analysis
+# Software Development Economics & Maintenance Cost Analysis
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS261]] > [[Cost of Development]]
 > **Related Notes:** [[Introduction to Software Engineering]] \| [[Classified Software]] \| [[CS261]]
 
 ---
@@ -103,7 +103,7 @@ Over the operational lifetime of an enterprise software product, financial expen
 
 ---
 
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS261]] — Main Course Index for Software Engineering
 - [[Introduction to Software Engineering]] — Foundational principles and professional ethics
 - [[Classified Software]] — Software classification taxonomies and ISO 25010

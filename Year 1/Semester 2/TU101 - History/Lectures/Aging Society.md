@@ -8,9 +8,9 @@ tags:
   - 
 status: developing
 related:
-  - "[[TU101 Final Exam Summation]]"
+  - "TU101 Final Exam Summation"
 sources:
-  - "[[Final Summation TU101]]"
+  - "Final Summation TU101"
 complexity: basic
 domain: sociology
 aliases:
@@ -18,6 +18,8 @@ aliases:
   - Super-Aged Society
 address: c-000004
 description: Concept note exploring the societal impacts and characteristics of an Aging Society.
+class: TU101
+parent: "TU101"
 ---
 
 # Aging Society

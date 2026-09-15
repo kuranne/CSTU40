@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Cumulative Distribution Function & Survival Function
-course_code: ST329
+class: ST329
 semester: Year 2 Semester 1
 week: 2, 3
 tags:
@@ -15,11 +15,11 @@ tags:
 description: "Cumulative Distribution Function (CDF), Survival Function, definitions for discrete and continuous random variables, and mathematical limit properties."
 created: 2026-09-02
 updated: 2026-09-05
+parent: "ST329"
 ---
 
-# 📊 Cumulative Distribution Function & Survival Function
+# Cumulative Distribution Function & Survival Function
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[ST329]] > [[Distribution]]
 > **Related Notes:** [[ST329]] | [[Random Variables]] | [[Formulae]] | [[CS240]]
 
 ---

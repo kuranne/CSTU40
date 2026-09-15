@@ -4,6 +4,8 @@ title: TU101 Final Exam Summation (Week 10 - 15)
 date: 30-04-2026
 language: EN
 description: Comprehensive summation of TU101 knowledge covering weeks 10 to 15 for the final exam.
+class: TU101
+parent: "TU101"
 ---
 
 # TU101
@@ -165,4 +167,3 @@ Political dimension: The middle class tends to be "cosmopolitan" (global citizen
 - **Good Job:** The definition of the middle class is having a "stable and well-paying job," which is becoming increasingly rare today.
     
 - **Sleepwalking into war:** A comparison suggesting that the modern world is heading toward conflict (e.g., US-China) just like the period before World War I, without even realizing it.
-

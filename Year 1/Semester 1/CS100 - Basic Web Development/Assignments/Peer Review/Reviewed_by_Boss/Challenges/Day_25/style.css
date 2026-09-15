@@ -20,7 +20,7 @@ a {
 }
 
 a:before {
-	content: 'By Raquel Limâ ❤️';
+	content: 'By Raquel Limâ ';
 	color:#FBAD60;
 	background-color:#F8DEBE;
 	display: flex;

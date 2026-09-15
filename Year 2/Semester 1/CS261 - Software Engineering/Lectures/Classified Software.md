@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Software Classification & Taxonomy
-course_code: CS261
+class: CS261
 week: 1, 2
 tags:
   - software-engineering
@@ -9,11 +9,11 @@ tags:
   - enterprise-software
   - iso-25010
 description: Taxonomy of software systems categorized by Target Users, Product Nature, Architectural Layers, Vertical vs Horizontal domains, and ISO 25010 Quality Model.
+parent: "CS261"
 ---
 
-# 📦 Software Classification & Taxonomy
+# Software Classification & Taxonomy
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS261]] > [[Classified Software]]
 > **Related Notes:** [[Introduction to Software Engineering]] \| [[Cost of Development]] \| [[CS261]]
 
 ---
@@ -116,7 +116,7 @@ Suitability    Efficiency                                                       
 
 ---
 
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS261]] — Main Course Index for Software Engineering
 - [[Introduction to Software Engineering]] — Foundational principles and professional ethics
 - [[Cost of Development]] — Software lifecycle cost distribution and maintenance models

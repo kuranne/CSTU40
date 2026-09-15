@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Data Cleaning & Preprocessing
-course_code: CS240
+class: CS240
 week: 4
 tags:
   - data-science
@@ -12,11 +12,11 @@ tags:
   - imputation
   - cstu40
 description: "Comprehensive guide to data cleaning and preprocessing techniques in Python: handling missing values, deduplication, type casting, format standardization, and outlier management."
+parent: "CS240"
 ---
 
-# 🧹 Data Cleaning & Preprocessing
+# Data Cleaning & Preprocessing
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS240]] > [[Data Cleaning]]
 > **Related Notes:** [[CS240]] | [[Data Science Process]] | [[Type Of Data]] | [[The Data Science]]
 > **Reference:** `Private/Docs/2.Data-Acquisition.pdf` | `Private/Docs/CS240_Week1_Principle_of_Data_Science.pdf`
 
@@ -33,9 +33,9 @@ Data preparation and cleaning typically consumes **60% to 80%** of a data scient
 
 ```mermaid
 flowchart LR
-    Raw["📥 Raw Dirty Data<br/>(Missing, Duplicates, Outliers)"] --> Cleaning["🧹 Data Cleaning Pipeline<br/>(Pandas / NumPy / Scikit-Learn)"]
-    Cleaning --> Clean["✨ High-Quality Clean Data<br/>(Standardized, Imputed, Validated)"]
-    Clean --> Modeling["🤖 Machine Learning Model<br/>(Accurate & Generalizable Predictions)"]
+    Raw["Raw Dirty Data<br/>(Missing, Duplicates, Outliers)"] --> Cleaning["Data Cleaning Pipeline<br/>(Pandas / NumPy / Scikit-Learn)"]
+    Cleaning --> Clean["High-Quality Clean Data<br/>(Standardized, Imputed, Validated)"]
+    Clean --> Modeling["Machine Learning Model<br/>(Accurate & Generalizable Predictions)"]
 ```
 
 ---
@@ -366,7 +366,7 @@ The quality of data is determined by factors such as accuracy, completeness, rel
 
 ---
 
-## 🔗 Related Notes & Course References
+## Related Notes & Course References
 - [[CS240]] — Main Course Index for Data Science
 - [[The Data Science]] — Foundational concepts, DIKW hierarchy, and analytics maturity
 - [[Data Science Process]] — Full 7-stage CRISP-DM lifecycle

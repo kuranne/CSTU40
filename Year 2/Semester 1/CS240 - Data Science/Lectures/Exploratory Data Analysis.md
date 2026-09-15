@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Exploratory Data Analysis (EDA)
-course_code: CS240
+class: CS240
 week: 4, 5
 tags:
   - data-science
@@ -13,17 +13,17 @@ tags:
 description: "Principles and processes of Exploratory Data Analysis (EDA), univariate and multivariate analysis, anomaly detection, and Python DataPrep library tools."
 created: 2026-09-04
 updated: 2026-09-05
+parent: "CS240"
 ---
 
-# 🔍 Exploratory Data Analysis (EDA)
+# Exploratory Data Analysis (EDA)
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS240]] > [[Exploratory Data Analysis]]
 > **Related Notes:** [[CS240]] | [[Data Cleaning]] | [[Data Science Process]] | [[Type Of Data]]
 > **Practice Labs:** `Labs/Week5/Practice_EDA_using_Pandas.ipynb`
 
 ---
 
-## 📌 Keywords & Research Topics
+## Keywords & Research Topics
 
 - [ ] **Explainable AI**
 - [ ] **EDA with Heart Disease** (example in `Private/Docs/3.EDA.pdf`)

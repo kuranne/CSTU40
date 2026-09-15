@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Array Memory Addressing & Assembly Implementation
-course_code: CS221
+class: CS221
 semester: Year 2 Semester 1
 week: 4, 5
 tags:
@@ -13,11 +13,11 @@ tags:
 description: "Array memory representation as contiguous blocks, base-index-displacement addressing formulas, and assembly loop iteration."
 created: 2026-09-01
 updated: 2026-09-05
+parent: "CS221"
 ---
 
-# 🗃️ Array Memory Addressing
+# Array Memory Addressing
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS221]] > [[Array]]
 > **Related Notes:** [[CS221]] | [[General Purpose]] | [[Instructions]] | [[Y86_64]]
 
 ---

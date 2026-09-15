@@ -1,3 +1,10 @@
+---
+type: lab
+class: CS261
+parent: "CS261"
+title: "create docker network before running any of these 3 docker containers."
+---
+
 # create docker network before running any of these 3 docker containers.
 docker network create mynetwork1 
 
@@ -27,4 +34,3 @@ docker run -d --name nodejs-container --network mynetwork1 -p 3000:3000 nodejs-i
 
 # Execute Shell inside the container 'nodejs-container'
 docker exec -it nodejs-container sh
-

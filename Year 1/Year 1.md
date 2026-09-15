@@ -5,20 +5,20 @@ created: 2026-08-08
 updated: 2026-08-19
 ---
 
-# 📚 Year 1 — First Year Curriculum
+# Year 1 — First Year Curriculum
 
 > [!info] แถบนำทาง: [[CSTU40]] > [[Year 1]]
 
 ---
 
-## ภาคเรียน (Semesters)
+## ภาคเรียน
 
-- [[Year 1 Semester 1|Semester 1 (ภาคเรียนที่ 1)]]
-- [[Year 1 Semester 2|Semester 2 (ภาคเรียนที่ 2)]]
+- [[Year 1 Semester 1|Semester 1]]
+- [[Year 1 Semester 2|Semester 2]]
 
 ---
 
-## 📑 สรุปรายวิชาตลอดปีการศึกษา 1
+## สรุปรายวิชาตลอดปีการศึกษา 1
 
 ### ภาคเรียนที่ 1 (Semester 1)
 | รหัสวิชา | ชื่อวิชา | หมวด | หน้าดัชนีวิชา |

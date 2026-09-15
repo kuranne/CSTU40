@@ -8,14 +8,16 @@ tags:
   - 
 status: developing
 related:
-  - "[[TU101 Final Exam Summation]]"
-  - "[[Göran Therborn]]"
+  - "TU101 Final Exam Summation"
+  - "Göran Therborn"
 sources:
-  - "[[Final Summation TU101]]"
+  - "Final Summation TU101"
 complexity: intermediate
 domain: economics
 address: c-000007
 description: Concept note on Financialization and its economic implications.
+class: TU101
+parent: "TU101"
 ---
 
 # Financialization

@@ -9,14 +9,14 @@ tags:
   - 
 status: mature
 related:
-  - "[[Aging Society]]"
-  - "[[Middle Income Trap]]"
-  - "[[Neoliberalism]]"
-  - "[[Financialization]]"
-  - "[[Global Middle Class]]"
-  - "[[Göran Therborn]]"
+  - "Aging Society"
+  - "Middle Income Trap"
+  - "Neoliberalism"
+  - "Financialization"
+  - "Global Middle Class"
+  - "Göran Therborn"
 sources:
-  - "[[Final Summation TU101]]"
+  - "Final Summation TU101"
 source_type: lecture
 date_published: 2026-04-30
 confidence: high
@@ -26,6 +26,8 @@ key_claims:
   - Göran Therborn argues the Global Middle Class faces precarity and a 'Vanishing Middle Class' nightmare.
 address: c-000003
 description: Source material and structured study notes for the TU101 Final Exam.
+class: TU101
+parent: "TU101"
 ---
 
 # TU101 Final Exam Summation

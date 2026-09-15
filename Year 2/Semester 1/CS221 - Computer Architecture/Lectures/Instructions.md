@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Instruction Set Architecture (ISA) & Machine Instructions
-course_code: CS221
+class: CS221
 week: 1, 2
 tags:
   - computer-architecture
@@ -10,11 +10,11 @@ tags:
   - stack-architecture
   - accumulator
 description: In-depth exploration of Instruction Set Architecture (ISA), Machine Code representation, Temporary Storage models (Accumulator, Stack, General-Purpose Registers), and instruction execution tracing.
+parent: "CS221"
 ---
 
-# 📜 Instruction Set Architecture (ISA) & Machine Instructions
+# Instruction Set Architecture (ISA) & Machine Instructions
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS221]] > [[Instructions]]
 > **Related Notes:** [[Register Architectures]] \| [[General Purpose]] \| [[Concurrency of CPU]] \| [[CS221]]
 
 ---
@@ -93,7 +93,7 @@ pop C               # Mem[C] = A + B
 
 ## 3. Step-by-Step Expression Tracing
 
-### 📌 Problem: Implement $A = (A + B) - (C + D) - E$
+### Problem: Implement $A = (A + B) - (C + D) - E$
 
 #### Method 1: Accumulator Architecture (Direct Approach)
 ```asm
@@ -241,7 +241,7 @@ done:
 ```
 
 ---
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS221]] — Main Course Index for Computer Architecture
 - [[Register Architectures]] — Register-Register vs. Register-Memory models
 - [[General Purpose]] — GPRs, integer representations, and addressing modes

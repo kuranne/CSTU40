@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Introduction to Data Structures & OOP Principles
-course_code: CS213
+class: CS213
 week: 1
 tags:
   - data-structure
@@ -10,11 +10,11 @@ tags:
   - complexity
   - big-o
 description: Introduction to Data Structures, Abstract Data Types (ADT), and Object-Oriented Programming principles including Data Abstraction, Encapsulation, Inheritance, and Polymorphism.
+parent: "CS213"
 ---
 
-# 🌲 Introduction to Data Structures & OOP Principles
+# Introduction to Data Structures & OOP Principles
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS213]] > [[Introduction to Data Structure]]
 > **Related Notes:** [[C++ Programming Language]] \| [[CS213]]
 
 ---
@@ -129,6 +129,6 @@ Evaluating data structures and algorithms requires analyzing two critical resour
 
 ---
 
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS213]] — Main Course Index for Data Structure
 - [[C++ Programming Language]] — Advanced C++ concepts and implementations

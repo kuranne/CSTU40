@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: General Purpose Registers & Integer Representations
-course_code: CS221
+class: CS221
 week: 3
 tags:
   - computer-architecture
@@ -11,11 +11,11 @@ tags:
   - integers
   - addressing-modes
 description: Detailed study of General Purpose Integer Registers, Signed/Unsigned Two's Complement Arithmetic, x86-64 Register Architecture, Assembly Operands, and Addressing Modes.
+parent: "CS221"
 ---
 
-# 💻 General Purpose Registers & Integer Representations
+# General Purpose Registers & Integer Representations
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS221]] > [[General Purpose]]
 > **Related Notes:** [[Instructions]] \| [[Register Architectures]] \| [[Concurrency of CPU]] \| [[CS221]]
 > **Reference:** `Private/Docs/221_02.pdf`
 
@@ -145,7 +145,7 @@ movl 4(%rdi, %rsi, 4), %eax # Computes &(arr[i+1]) and loads 32-bit int into %ea
 
 ---
 
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS221]] — Main Course Index for Computer Architecture
 - [[Instructions]] — Instruction Set Architecture and instruction formats
 - [[Register Architectures]] — Register-Register vs. Register-Memory models

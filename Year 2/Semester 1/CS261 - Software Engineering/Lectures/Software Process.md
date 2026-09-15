@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Software Engineering Process & Project Risk Management
-course_code: CS261
+class: CS261
 week: 2
 tags:
   - software-engineering
@@ -10,11 +10,11 @@ tags:
   - project-management
   - cstu40
 description: Software engineering operational hierarchy, risk control strategies, bespoke vs. COTS project models, and decomposition.
+parent: "CS261"
 ---
 
-# ⚙️ Software Engineering Process
+# Software Engineering Process
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS261]] > [[Software Process]]
 > **Related Notes:** [[Introduction to Software Engineering]] | [[Classified Software]] | [[Cost of Development]] | [[System Engineer]] | [[CS261]]
 
 ---

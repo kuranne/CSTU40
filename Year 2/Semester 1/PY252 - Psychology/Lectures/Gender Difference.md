@@ -1,7 +1,11 @@
 ---
 type: lecture
 description:
+class: PY252
+parent: "PY252"
+title: "Lesson"
 ---
+
 #Week3 
 # Lesson
 
@@ -25,5 +29,3 @@ BigFive: **OCEAN** ทฤษฎีที่เจาะไปทาง 5 สา�
 4. Agreeableness ส่วนรวม เป็นมิตร
 5. Neuroticism ความไม่มั่นคงทางอารมณ์
 ซึ่งได้รับความนิยมค่อนข้างมากในองค์กร เพื่อใช้ในการทำนายสิ่งต่างๆในชีวิต
-
-

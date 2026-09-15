@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Queue ADT & Implementations
-course_code: CS213
+class: CS213
 semester: Year 2 Semester 1
 week: 6
 tags:
@@ -14,11 +14,11 @@ tags:
 description: "Queue Abstract Data Type (ADT), FIFO semantics, Circular Array and Linked List implementations, detailed function-by-function code breakdowns, and complexity analysis."
 created: 2026-09-10
 updated: 2026-09-10
+parent: "CS213"
 ---
 
-# 🚶‍♂️ Queue ADT & Implementations
+# Queue ADT & Implementations
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS213]] > [[Queue]]
 > **Related Notes:** [[CS213]] | [[Linked List]] | [[Stack]] | [[Memory]]
 
 ---

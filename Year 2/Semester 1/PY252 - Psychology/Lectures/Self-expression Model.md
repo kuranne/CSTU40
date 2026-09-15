@@ -1,7 +1,11 @@
 ---
 type: lecture
 description:
+class: PY252
+parent: "PY252"
+title: "Lesson"
 ---
+
 #Week3 
 # Lesson
 

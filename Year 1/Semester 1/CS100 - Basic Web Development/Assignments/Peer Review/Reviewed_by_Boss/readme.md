@@ -1,24 +1,31 @@
-<h2 align="center"> 30DaysOfCSS 🖌🚀 <h2>
+---
+type: assignment
+class: CS100
+parent: "CS100"
+title: "readme"
+---
+
+<h2 align="center"> 30DaysOfCSS <h2>
 
 
-## 📝 About 
+## About 
 30 days of CSS is a project that aims to improve coding skills by making mini daily projects using HTML5 and CSS.
 
 <br>
 
-## 🎯 Goal 
+## Goal 
 The 30 days of CSS challenge aims to improve learning about html and css (without frameworks), using animations and effects. A challenge created by [Milena Carecho](https://github.com/MilenaCarecho), [see here](https://github.com/MilenaCarecho/30diasDeCSS).
 
 <br>
 
-## 📣 Rules 
+## Rules 
 * Make one project a day;
 * Share your progress on social media using the hashtags #30DaysOfCSS and #30diasDeCSS;
 * The project must be completed by 11:59 pm.
 
 <br>
 
-## 🗒 Challenges 
+## Challenges 
 * [Day 01 - Animation using search box](#id01)
 * [Day 02 - Animated loader](#id02)
 * [Day 03 - Layered social media icon](#id03)

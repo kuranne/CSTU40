@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Types of Data & Measurement Scales
-course_code: CS240
+class: CS240
 week: 3
 tags:
   - data-science
@@ -9,11 +9,11 @@ tags:
   - measurement-scales
   - statistics
 description: Comprehensive classification of data by Structure (Structured, Semi-Structured, Unstructured) and Scales of Measurement (Nominal, Ordinal, Interval, Ratio) with statistical properties.
+parent: "CS240"
 ---
 
-# 📊 Types of Data & Measurement Scales
+# Types of Data & Measurement Scales
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS240]] > [[Type Of Data]]
 > **Related Notes:** [[The Data Science]] | [[Data Science Process]] | [[CS240]] | [[ST329]]
 
 ---
@@ -62,7 +62,7 @@ In Data Science, datasets are categorized by their organizational format and sch
 
 ## 3. Four Levels of Measurement (Stevens' Scales)
 
-Stanley Smith Stevens (1946) classified data into four fundamental measurement scales with increasing mathematical properties:
+Stanley Smith Stevens classified data into four fundamental measurement scales with increasing mathematical properties:
 
 1. **Nominal Scale (Labels & Names):**
    - Mutually exclusive categories with **no intrinsic order** or quantitative value.
@@ -92,15 +92,15 @@ The table below summarizes the operational and statistical capabilities provided
 
 | Provides: | Nominal | Ordinal | Interval | Ratio |
 | :--- | :---: | :---: | :---: | :---: |
-| **The "order" of values is known** | | ✓ | ✓ | ✓ |
-| **"Counts," aka "Frequency of Distribution"** | ✓ | ✓ | ✓ | ✓ |
-| **Mode** | ✓ | ✓ | ✓ | ✓ |
-| **Median** | | ✓ | ✓ | ✓ |
-| **Mean** | | | ✓ | ✓ |
-| **Can quantify the difference between each value** | | | ✓ | ✓ |
-| **Can add or subtract values** | | | ✓ | ✓ |
-| **Can multiply and divide values** | | | | ✓ |
-| **Has "true zero"** | | | | ✓ |
+| **The "order" of values is known** | | | | |
+| **"Counts," aka "Frequency of Distribution"** | | | | |
+| **Mode** | | | | |
+| **Median** | | | | |
+| **Mean** | | | | |
+| **Can quantify the difference between each value** | | | | |
+| **Can add or subtract values** | | | | |
+| **Can multiply and divide values** | | | | |
+| **Has "true zero"** | | | | |
 
 ---
 
@@ -121,7 +121,7 @@ Understanding the measurement scale directly dictates how variables should be pr
 
 ---
 
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS240]] — Main Course Index for Data Science
 - [[The Data Science]] — Introduction to Data Science, DIKW hierarchy, and Analytics Maturity
 - [[Data Science Process]] — Full CRISP-DM / OSEMN lifecycle and EDA workflows

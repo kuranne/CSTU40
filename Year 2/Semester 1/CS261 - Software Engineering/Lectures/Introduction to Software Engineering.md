@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Introduction to Software Engineering & Professional Principles
-course_code: CS261
+class: CS261
 week: 1
 tags:
   - software-engineering
@@ -9,11 +9,11 @@ tags:
   - software-lifecycle
   - engineering-vs-programming
 description: Introduction to Software Engineering principles, IEEE definition, differences between programming and engineering, the software crisis, and core disciplines.
+parent: "CS261"
 ---
 
-# 🛠️ Introduction to Software Engineering & Professional Principles
+# Introduction to Software Engineering & Professional Principles
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS261]] > [[Introduction to Software Engineering]]
 > **Related Notes:** [[Classified Software]] \| [[Cost of Development]] \| [[CS261]]
 
 ---
@@ -97,7 +97,7 @@ A successful software project satisfies four core dimensions:
 
 ---
 
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS261]] — Main Course Index for Software Engineering
 - [[Classified Software]] — Software classifications, domain taxonomies, and ISO 25010
 - [[Cost of Development]] — Software lifecycle economics and maintenance breakdown

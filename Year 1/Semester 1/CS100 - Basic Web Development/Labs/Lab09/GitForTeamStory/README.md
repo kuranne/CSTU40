@@ -1,3 +1,10 @@
+---
+type: lab
+class: CS100
+parent: "CS100"
+title: "Team Story Challenge"
+---
+
 # Team Story Challenge
 
 This is the starting draft of your team’s story.  

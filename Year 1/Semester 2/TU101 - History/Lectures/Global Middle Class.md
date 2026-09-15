@@ -8,14 +8,16 @@ tags:
   - 
 status: developing
 related:
-  - "[[TU101 Final Exam Summation]]"
-  - "[[Göran Therborn]]"
+  - "TU101 Final Exam Summation"
+  - "Göran Therborn"
 sources:
-  - "[[Final Summation TU101]]"
+  - "Final Summation TU101"
 complexity: intermediate
 domain: sociology
 address: c-000008
 description: Concept note detailing the rise and impact of the Global Middle Class.
+class: TU101
+parent: "TU101"
 ---
 
 # Global Middle Class

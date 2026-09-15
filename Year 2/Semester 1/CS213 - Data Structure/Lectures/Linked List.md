@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Linked List
-course_code: CS213
+class: CS213
 semester: Year 2 Semester 1
 week: 4, 5
 tags:
@@ -13,11 +13,11 @@ tags:
 description: "Core linear data structures covering Singly, Doubly, and Circular Linked Lists with C/C++ implementations, pointer dynamics, and basic operations."
 created: 2026-09-03
 updated: 2026-09-05
+parent: "CS213"
 ---
 
-# 🔗 Linked List
+# Linked List
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS213]] > [[Linked List]]
 > **Related Notes:** [[CS213]] | [[Memory]] | [[Introduction to Data Structure]] | [[Searching]]
 > **Course Labs:** `Labs/Week5/linked_list/`
 
@@ -97,9 +97,9 @@ void printList(Node *n) {
 }
 
 int main() {
-  Node *head = new Node(1);
-  Node *second = new Node(2);
-  Node *third = new Node(3);
+  Node *head = new Node;
+  Node *second = new Node;
+  Node *third = new Node;
 
   head->next = second;
   second->next = third;
@@ -156,9 +156,9 @@ void printList(Node *node) {
 }
 
 int main() {
-  Node *head = new Node(1);
-  Node *second = new Node(2);
-  Node *third = new Node(3);
+  Node *head = new Node;
+  Node *second = new Node;
+  Node *third = new Node;
 
   head->next = second;
   second->prev = head;
@@ -211,9 +211,9 @@ void printList(Node *head) {
 }
 
 int main() {
-  Node *head = new Node(1);
-  Node *second = new Node(2);
-  Node *third = new Node(3);
+  Node *head = new Node;
+  Node *second = new Node;
+  Node *third = new Node;
 
   head->next = second;
   second->next = third;

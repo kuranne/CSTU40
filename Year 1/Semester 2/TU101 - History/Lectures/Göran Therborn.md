@@ -8,16 +8,18 @@ tags:
   - 
 status: developing
 related:
-  - "[[Global Middle Class]]"
-  - "[[Neoliberalism]]"
-  - "[[Financialization]]"
+  - "Global Middle Class"
+  - "Neoliberalism"
+  - "Financialization"
 sources:
-  - "[[Final Summation TU101]]"
+  - "Final Summation TU101"
 entity_type: person
 role: Sociologist
-first_mentioned: "[[TU101 Final Exam Summation]]"
+first_mentioned: "TU101 Final Exam Summation"
 address: c-000009
 description: Entity profile of sociologist Göran Therborn and his key theories.
+class: TU101
+parent: "TU101"
 ---
 
 # Göran Therborn

@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: x86_64 Assembly Bitwise & Shift Operations Exercises
-course_code: CS221
+class: CS221
 week: 3, 4
 tags:
   - computer-architecture
@@ -11,11 +11,11 @@ tags:
   - exercises
   - cstu40
 description: Practice exercises and step-by-step tracing for bitwise NOT, OR, SHL, and SHR operations on x86_64 registers %rax and %rcx.
+parent: "CS221"
 ---
 
-# 📝 Assembly Bitwise & Shift Exercises
+# Assembly Bitwise & Shift Exercises
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS221]] > [[Exercise]]
 > **Related Notes:** [[General Purpose]] | [[Instructions]] | [[Assembly]] | [[CS221]]
 
 ---
@@ -103,24 +103,33 @@ shr $4, %rcx  = 0000 0100 0000 (64 = 1024 / 16; or 128 if starting from 2048)
 
 Here, let $\%rax=4, \%rcx=0x4000, and\text{ }PC=0x0$
 
-| Address | Assembly              | Machine Code           |
-| ------- | --------------------- | ---------------------- |
-| 0       | `rmmov %rax, 4(%rcx)` | `40010000000000000004` |
-| 10      | `irmov $8, %rcx`      | `30F10000000000000008` |
+| Address | Assembly              | Machine Code               |
+| ------- | --------------------- | -------------------------- |
+| 0       | `rmmov %rax, 4(%rcx)` | `4001 0000 0000 0000 0004` |
+| 10      | `irmov $8, %rcx`      | `30F1 0000 0000 0000 0008` |
 
-**fetch:**
-	$let\text{ }PC = 0$
-	$icode:ifun \leftarrow M_1[PC]$
-	$rA:rB \leftarrow M_1[PC+1]$
-	$valC \leftarrow M_8[PC+2]$
-	$valP \leftarrow PC + 10$
-**decode:**
-	$valB \leftarrow R[rB]$
-**execute:**
-	$valE \leftarrow valB + valC$
-**memory:**
-	$valM \leftarrow M_8[valE]$
-**write-back:**
-	$R[rA] \leftarrow valM$
-**PC Update:**
-	$PC \leftarrow valP$
+| Stage      | `rmmove %rax, 4(%rcx)`                                                                               | `irmove $8, %rcx`                                                                                      |
+| ---------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Fetch      | $icode:ifun \leftarrow 4:0$<br>$rA:rB \leftarrow 0:1$<br>$varC \leftarrow 4$<br>$varP \leftarrow 10$ | $icode:ifun \leftarrow 3:0$<br>$rA:rB \leftarrow F : 1$<br>$varC \leftarrow 8$<br>$varP \leftarrow 20$ |
+| Decode     | $varA \leftarrow 4$<br>$varB \leftarrow 0x4000$                                                      | -                                                                                                      |
+| Execute    | $varE \leftarrow 0x4004$<br>$ZF = 0, SF = 0, CF = 0$                                                 | $varE \leftarrow 8$                                                                                    |
+| Memory     | $Mem[valE] \leftarrow 4$                                                                             | -                                                                                                      |
+| Write Back | -                                                                                                    | $Reg[1] \leftarrow 8$                                                                                  |
+| PC Update  | $PC <- 10 \text{ from varP}$                                                                         | $PC \leftarrow 20$                                                                                     |
+
+---
+
+## 7. Write the control signal
+
+when `mrmov D(rB), rA` is executed
+
+| Cycle         | irWrite | valPWrite | valAWrite | valBWrite | valEWrite | valMWrite | pcWrite |
+| ------------- | ------- | --------- | --------- | --------- | --------- | --------- | ------- |
+| 1. Fetch      | ==1==   | ==1==     | 0         | 0         | 0         | 0         | 0       |
+| 2. Decode     | 0       | 0         | 0         | ==1==     | 0         | 0         | 0       |
+| 3. Execute    | 0       | 0         | 0         | 0         | ==1==     | 0         | 0       |
+| 4. Memory     | 0       | 0         | 0         | 0         | 0         | ==1==     | 0       |
+| 5. Write Back | 0       | 0         | 0         | 0         | 0         | 0         | 0       |
+| 6. PC Update  | 0       | 0         | 0         | 0         | 0         | 0         | ==1==   |
+
+---

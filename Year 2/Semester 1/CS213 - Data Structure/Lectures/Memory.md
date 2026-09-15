@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Memory Management & Layout in C and C++
-course_code: CS213
+class: CS213
 week: 3
 tags:
   - data-structures
@@ -10,11 +10,11 @@ tags:
   - pointers
   - c-cpp
 description: Detailed study of runtime program memory layout (Stack, Heap, Data, Text segments), dynamic memory allocation in C (malloc, calloc, realloc, free) vs C++ (new, delete), and memory safety best practices.
+parent: "CS213"
 ---
 
-# 🧠 Memory Management & Layout in C and C++
+# Memory Management & Layout in C and C++
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS213]] > [[Memory]]
 > **Prerequisites & Related Notes:** [[CS102]] \| [[Introduction to Data Structure]] \| [[C++ Programming Language]] \| [[CS213]]
 
 ---
@@ -155,7 +155,7 @@ To eliminate manual memory tracking and prevent memory leaks, modern C++ adheres
 
 ---
 
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS213]] — Main Course Index for Data Structure
 - [[CS102]] — Foundational C programming and pointers
 - [[C++ Programming Language]] — Classes, constructors, and RAII in C++

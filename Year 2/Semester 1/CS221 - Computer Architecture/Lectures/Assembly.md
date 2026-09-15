@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Assembly Language Compilation & Toolchain Pipeline
-course_code: CS221
+class: CS221
 week: 2, 4
 tags:
   - computer-architecture
@@ -11,16 +11,17 @@ tags:
   - elf64
   - cstu40
 description: x86_64 assembly compilation pipeline from source assembly to machine instructions, linking with standard libraries, and executable binary generation.
+parent: "CS221"
 ---
 
-# ⚙️ Assembly Program
+# Assembly Program
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS221]] > [[Assembly]]
 > **Related Notes:** [[Instructions]] | [[General Purpose]] | [[Register Architectures]] | [[Exercise]] | [[CS221]] | [[CS102]]
 
 ---
 
 ## 1. Specification & Target Architecture
+
 - **Architecture Specification:** ==Intel / AMD64 (x86_64)==
 - **Binary / Object Format:** `ELF64` (Executable and Linkable Format, 64-bit)
 

@@ -5,13 +5,11 @@ created: 2026-08-08
 updated: 2026-09-05
 ---
 
-# 📖 Year 2 Semester 1
-
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]]
+# Year 2 Semester 1
 
 ---
 
-## 📑 Courses in Semester 1
+## Courses in Semester 1
 
 | Course Code | Course Title | Instructor | Category | Lecture Notes & Materials |
 | :--- | :--- | :--- | :--- | :--- |

@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Concurrency, Parallelism & Computer Architecture
-course_code: CS221
+class: CS221
 week: 1
 tags:
   - computer-architecture
@@ -11,11 +11,11 @@ tags:
   - von-neumann
   - harvard-architecture
 description: Understanding Thread-Level Concurrency, Instruction-Level Parallelism (ILP), Hardware Organization, Multi-core Systems, and Von Neumann vs Harvard Architectures.
+parent: "CS221"
 ---
 
-# ⚡ Concurrency, Parallelism & Computer Architecture
+# Concurrency, Parallelism & Computer Architecture
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS221]] > [[Concurrency of CPU]]
 > **Related Notes:** [[Instructions]] \| [[Register Architectures]] \| [[General Purpose]] \| [[CS221]]
 
 ---
@@ -113,7 +113,7 @@ Inst 3:                 [IF] [ID] [EX] [MEM][WB]
 
 ---
 
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS221]] — Main Course Index for Computer Architecture
 - [[Instructions]] — ISA categories and instruction decoding
 - [[Register Architectures]] — Register-Register vs. Register-Memory models

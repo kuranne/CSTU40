@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: System Engineering Principles & Lifecycle Methods
-course_code: CS261
+class: CS261
 week: 2
 tags:
   - software-engineering
@@ -9,11 +9,11 @@ tags:
   - system-lifecycle
   - cstu40
 description: Core components of system engineering, functional partitioning, component interactions, and the 7-phase system engineering lifecycle.
+parent: "CS261"
 ---
 
-# 🏗️ System Engineering
+# System Engineering
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS261]] > [[System Engineer]]
 > **Related Notes:** [[Introduction to Software Engineering]] | [[Software Process]] | [[Cost of Development]] | [[CS261]]
 
 ---

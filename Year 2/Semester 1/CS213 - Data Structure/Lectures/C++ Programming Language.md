@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: C++ Programming Language for Data Structures
-course_code: CS213
+class: CS213
 week: 1, 2
 tags:
   - cpp
@@ -10,11 +10,11 @@ tags:
   - templates
   - operator-overloading
 description: Deep dive into modern C++ features for Data Structures, including Classes, Interface vs Implementation, Constructors/Destructors, Operator Overloading, and Templates.
+parent: "CS213"
 ---
 
-# ⚙️ C++ Programming Language for Data Structures
+# C++ Programming Language for Data Structures
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS213]] > [[C++ Programming Language]]
 > **Related Notes:** [[Introduction to Data Structure]] \| [[CS213]]
 
 ---
@@ -213,7 +213,7 @@ private:
     int count;
 
 public:
-    Stack() : topNode(nullptr), count(0) {}
+    Stack() : topNode(nullptr), count {}
     
     void push(const T& val) {
         Node<T>* newNode = new Node<T>(val);
@@ -239,6 +239,6 @@ public:
 
 ---
 
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS213]] — Main Course Index for Data Structure
 - [[Introduction to Data Structure]] — Foundational data structures and OOP principles

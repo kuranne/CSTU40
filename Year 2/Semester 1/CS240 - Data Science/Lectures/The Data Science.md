@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Introduction to Data Science & Analytics Maturity
-course_code: CS240
+class: CS240
 week: 1
 tags:
   - data-science
@@ -9,11 +9,11 @@ tags:
   - dikw-pyramid
   - machine-learning
 description: Fundamental concepts of Data Science, Data vs Information (DIKW Pyramid), Data Science Venn Diagram, and the 4 Levels of Analytics Maturity.
+parent: "CS240"
 ---
 
-# 📊 Introduction to Data Science & Analytics Maturity
+# Introduction to Data Science & Analytics Maturity
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS240]] > [[The Data Science]]
 > **Related Notes:** [[Data Science Process]] \| [[CS240]]
 > **Reference:** `Private/Docs/CS240_Week1_Principle_of_Data_Science.pdf`
 
@@ -21,12 +21,12 @@ description: Fundamental concepts of Data Science, Data vs Information (DIKW Pyr
 
 ## 1. Foundational Questions & Definitions
 
-### ❓ 1. What is Data Science?
+### 1. What is Data Science?
 **Data Science** is an interdisciplinary field that applies scientific methods, mathematical processes, algorithms, and computing systems to extract knowledge, actionable insights, and verifiable facts from structured and unstructured data to drive evidence-based decision-making.
 
 ---
 
-### ❓ 2. The DIKW Hierarchy (Data $\rightarrow$ Information $\rightarrow$ Knowledge $\rightarrow$ Wisdom)
+### 2. The DIKW Hierarchy (Data $\rightarrow$ Information $\rightarrow$ Knowledge $\rightarrow$ Wisdom)
 
 ```
                             ┌───────────────┐
@@ -49,7 +49,7 @@ description: Fundamental concepts of Data Science, Data vs Information (DIKW Pyr
 
 ---
 
-### ❓ 3. Data Science vs. Data Analytics vs. Machine Learning
+### 3. Data Science vs. Data Analytics vs. Machine Learning
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
@@ -132,6 +132,6 @@ Value  ▲
 
 ---
 
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS240]] — Main Course Index for Data Science
 - [[Data Science Process]] — End-to-end CRISP-DM lifecycle and methodologies

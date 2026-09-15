@@ -5,13 +5,11 @@ created: 2026-08-08
 updated: 2026-08-20
 ---
 
-# 📖 Year 1 Semester 1
-
-> [!info] Navigation: [[CSTU40]] > [[Year 1]] > [[Year 1 Semester 1]]
+# Year 1 Semester 1
 
 ---
 
-## 📑 Courses in Semester 1
+## Courses in Semester 1
 
 | Course Code | Course Title | Category | Description |
 | :--- | :--- | :--- | :--- |

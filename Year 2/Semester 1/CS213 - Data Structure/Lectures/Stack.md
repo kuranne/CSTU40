@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Stack ADT & Implementations
-course_code: CS213
+class: CS213
 semester: Year 2 Semester 1
 week: 6
 tags:
@@ -13,11 +13,11 @@ tags:
 description: "Stack Abstract Data Type (ADT), LIFO semantics, comprehensive Array and Linked List implementations, function-by-function breakdowns, and applications."
 created: 2026-09-10
 updated: 2026-09-10
+parent: "CS213"
 ---
 
-# 🥞 Stack ADT & Implementations
+# Stack ADT & Implementations
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS213]] > [[Stack]]
 > **Related Notes:** [[CS213]] | [[Linked List]] | [[Queue]] | [[Memory]]
 
 ---

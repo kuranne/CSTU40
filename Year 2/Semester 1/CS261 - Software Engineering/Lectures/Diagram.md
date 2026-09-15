@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: "UML Diagrams & Mermaid Syntax Complete Reference"
-course_code: CS261
+class: CS261
 week: 4
 tags:
   - software-engineering
@@ -11,11 +11,11 @@ tags:
   - mermaid-syntax
   - cstu40
 description: "Comprehensive guide to all 14 UML 2.5 standard diagrams (Structural and Behavioral) with theoretical foundations, notation conventions, and copy-pasteable Mermaid syntax examples."
+parent: "CS261"
 ---
 
-# 📐 UML Diagrams & Mermaid Syntax Complete Reference
+# UML Diagrams & Mermaid Syntax Complete Reference
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS261]] > [[Diagram]]
 > **Related Notes:** [[CS261]] \| [[Introduction to Software Engineering]] \| [[Software Process]] \| [[System Engineer]] \| [[Cost of Development]]
 
 ---
@@ -77,11 +77,11 @@ The **Unified Modeling Language (UML)** is an ISO/IEC and OMG (Object Management
 
 ---
 
-# Part I: Structural UML Diagrams (ไดอะแกรมเชิงโครงสร้าง)
+# Part I: Structural UML Diagrams
 
 ---
 
-### 1. Class Diagram (คลาสไดอะแกรม)
+### 1. Class Diagram
 
 > [!info] Concept & Purpose
 > The **Class Diagram** is the cornerstone of object-oriented modeling. It models the static structure of a system by showing the system's classes, their attributes, operations (methods), visibility, and the relationships among objects.
@@ -163,7 +163,7 @@ classDiagram
 
 ---
 
-### 2. Object Diagram (ออบเจกต์ไดอะแกรม)
+### 2. Object Diagram
 
 > [!info] Concept & Purpose
 > An **Object Diagram** represents a static snapshot of the system's runtime state at a specific moment in time ($t = t_0$). It instantiates classes into concrete objects, shows specific attribute values, and depicts the actual links connecting those instances.
@@ -219,7 +219,7 @@ classDiagram
 
 ---
 
-### 3. Package Diagram (แพ็กเกจไดอะแกรม)
+### 3. Package Diagram
 
 > [!info] Concept & Purpose
 > A **Package Diagram** organizes the system's structural elements into logical groups, folders, namespaces, or layers. It highlights architectural boundaries, subsystem hierarchies, and dependencies (`<<use>>`, `<<import>>`, `<<access>>`) across Clean Architecture or Layered Architecture tiers.
@@ -233,23 +233,23 @@ classDiagram
 
 ```mermaid
 flowchart TD
-    subgraph PresentationLayer ["📦 Presentation Tier (UI & Controllers)"]
+    subgraph PresentationLayer ["Presentation Tier (UI & Controllers)"]
         WebControllers["AuthControllers<br/>OrderControllers<br/>ProductControllers"]
         ViewTemplates["REST API Endpoints<br/>JSON Serialization"]
     end
 
-    subgraph ApplicationLayer ["📦 Application & Domain Tier (Business Logic)"]
+    subgraph ApplicationLayer ["Application & Domain Tier (Business Logic)"]
         Services["UserService<br/>OrderProcessingService<br/>PaymentService"]
         DomainEntities["Entities: User, Order, Product<br/>Value Objects: Money, Address"]
         DomainInterfaces["Repositories Interfaces<br/>Domain Event Listeners"]
     end
 
-    subgraph InfrastructureLayer ["📦 Infrastructure Tier (External Adapters)"]
+    subgraph InfrastructureLayer ["Infrastructure Tier (External Adapters)"]
         DatabaseAdapters["PostgreSQL Repository Impl<br/>Redis Cache Adapter"]
         ExternalServices["Stripe Payment Gateway<br/>SendGrid Email Client"]
     end
 
-    subgraph CommonCore ["📦 Core Kernel & Shared Utilities"]
+    subgraph CommonCore ["Core Kernel & Shared Utilities"]
         Utilities["Exceptions & Logger<br/>Security & JWT Validator"]
     end
 
@@ -261,7 +261,7 @@ flowchart TD
 
 ---
 
-### 4. Component Diagram (คอมโพเนนต์ไดอะแกรม)
+### 4. Component Diagram
 
 > [!info] Concept & Purpose
 > A **Component Diagram** describes the organization and wiring of modular, replaceable software units (components). It models high-level service interfaces using **Provided Interfaces** (Lollipops / what the component offers) and **Required Interfaces** (Sockets / what the component needs from others).
@@ -309,7 +309,7 @@ flowchart LR
 
 ---
 
-### 5. Deployment Diagram (ดีพลอยเมนต์ไดอะแกรม)
+### 5. Deployment Diagram
 
 > [!info] Concept & Purpose
 > A **Deployment Diagram** models the physical or virtual computing hardware architecture, network topology, runtime execution environments (Kubernetes, JVM, Docker), and the concrete software **artifacts** (`.jar`, `.dockerfile`, `.war`, `.exe`) deployed onto them.
@@ -363,7 +363,7 @@ flowchart TD
 
 ---
 
-### 6. Composite Structure Diagram (คอมโพสิตสตรัคเจอร์ไดอะแกรม)
+### 6. Composite Structure Diagram
 
 > [!info] Concept & Purpose
 > A **Composite Structure Diagram** looks *inside* a complex classifier or system component to depict its internal structural decomposition. It details internal **parts**, **ports** (interaction endpoints), **connectors**, and collaborating roles that collaborate during runtime execution.
@@ -388,7 +388,7 @@ flowchart LR
         subgraph InternalEngine ["Internal Architecture"]
             SSLEngine["<b>part: sslHandler</b><br/>[TLS 1.3 Decryptor]"]
             RequestRouter["<b>part: router</b><br/>[Trie Radix Matcher]"]
-            ThreadPool["<b>part: workerPool</b><br/>[FixedThreadPool(128)]"]
+            ThreadPool["<b>part: workerPool</b><br/>[FixedThreadPool]"]
             CacheLayer["<b>part: memCache</b><br/>[LRU Memory Cache]"]
         end
 
@@ -411,7 +411,7 @@ flowchart LR
 
 ---
 
-### 7. Profile Diagram (โพรไฟล์ไดอะแกรม)
+### 7. Profile Diagram
 
 > [!info] Concept & Purpose
 > A **Profile Diagram** provides an extension mechanism for customizing standard UML metamodels for specific domains, architectural platforms, or programming frameworks (e.g., Spring Boot, Java Enterprise, Embedded Real-Time systems, Cloud-Native Microservices).
@@ -472,11 +472,11 @@ classDiagram
 
 ---
 
-# Part II: Behavioral UML Diagrams (ไดอะแกรมเชิงพฤติกรรม)
+# Part II: Behavioral UML Diagrams
 
 ---
 
-### 8. Use Case Diagram (ยูสเคสไดอะแกรม)
+### 8. Use Case Diagram
 
 > [!info] Concept & Purpose
 > A **Use Case Diagram** captures the functional requirements of a system from the perspective of external actors. It depicts the system boundary, primary/secondary actors, and use cases (system capabilities), highlighting inclusion and extension relationships.
@@ -493,12 +493,12 @@ classDiagram
 ```mermaid
 flowchart LR
     subgraph Actors ["External Actors"]
-        Customer(("👤 Customer<br/>(Primary)"))
-        Staff(("👨‍💼 Store Staff<br/>(Primary)"))
-        BankSystem["🏦 Payment Gateway<br/>(Secondary System)"]
+        Customer(("Customer<br/>(Primary)"))
+        Staff(("Store Staff<br/>(Primary)"))
+        BankSystem["Payment Gateway<br/>(Secondary System)"]
     end
 
-    subgraph SystemBoundary ["📦 E-Commerce Web System Boundary"]
+    subgraph SystemBoundary ["E-Commerce Web System Boundary"]
         UC1(["Browse Products"])
         UC2(["Search Catalog"])
         UC3(["Place Order"])
@@ -523,7 +523,7 @@ flowchart LR
 
 ---
 
-### 9. Activity Diagram (แอคทิวิตีไดอะแกรม)
+### 9. Activity Diagram
 
 > [!info] Concept & Purpose
 > An **Activity Diagram** models procedural workflows, business logic, algorithmic control flows, and data transitions. It natively supports **parallel processing** (Forks and Joins) and **Swimlanes** (partitioning responsibilities across organizational roles or microservices).
@@ -558,14 +558,14 @@ flowchart TD
     ShowOTPError --> InputOTP
     VerifyOTP -- "[Yes]" --> ForkSync
 
-    CheckMFA -- "[No]" --> ForkSync{{"⚡ Fork: Parallel Session Setup"}}
+    CheckMFA -- "[No]" --> ForkSync{{"Fork: Parallel Session Setup"}}
 
     %% Parallel Fork Execution
     ForkSync --> GenerateJWT["Issue Signed JWT Token"]
     ForkSync --> RecordAudit["Write Audit Log to ElasticSearch"]
     ForkSync --> UpdateLastLogin["Update last_login_timestamp in DB"]
 
-    GenerateJWT --> JoinSync{{"⚡ Join: Synchronize Tasks"}}
+    GenerateJWT --> JoinSync{{"Join: Synchronize Tasks"}}
     RecordAudit --> JoinSync
     UpdateLastLogin --> JoinSync
 
@@ -575,7 +575,7 @@ flowchart TD
 
 ---
 
-### 10. State Machine / State Diagram (สเตตไดอะแกรม)
+### 10. State Machine / State Diagram
 
 > [!info] Concept & Purpose
 > A **State Machine Diagram** (Statechart) models the dynamic lifecycle of a single object or finite state machine (FSM). It illustrates the discrete states an entity undergoes in response to external events, guard conditions, and internal actions.
@@ -625,7 +625,7 @@ stateDiagram-v2
 
 ---
 
-### 11. Sequence Diagram (ซีเควนซ์ไดอะแกรม)
+### 11. Sequence Diagram
 
 > [!info] Concept & Purpose
 > A **Sequence Diagram** is the most widely utilized interaction diagram. It models object interactions arranged in strict **chronological time sequence**. It emphasizes the vertical progression of time and the horizontal messages passed between collaborating lifelines.
@@ -649,11 +649,11 @@ stateDiagram-v2
 ```mermaid
 sequenceDiagram
     autonumber
-    actor Client as 📱 Mobile App
-    participant GW as 🛡️ API Gateway
-    participant Auth as 🔑 Auth Service
-    participant Cache as ⚡ Redis Session
-    participant DB as 🗄️ PostgreSQL DB
+    actor Client as Mobile App
+    participant GW as API Gateway
+    participant Auth as Auth Service
+    participant Cache as Redis Session
+    participant DB as PostgreSQL DB
 
     Client->>GW: POST /api/v1/auth/login {email, password}
     activate GW
@@ -693,7 +693,7 @@ sequenceDiagram
 
 ---
 
-### 12. Communication Diagram (คอมมิวนิเคชันไดอะแกรม)
+### 12. Communication Diagram
 
 > [!info] Concept & Purpose
 > Formerly known as a **Collaboration Diagram** in UML 1.x, the **Communication Diagram** focuses on the **structural organization and architecture** of collaborating objects rather than pure time progression. Message sequencing is shown explicitly via **hierarchically numbered decimal labels** ($1, 1.1, 1.2, 2, ...$).
@@ -707,12 +707,12 @@ sequenceDiagram
 
 ```mermaid
 flowchart TD
-    Client["👤 <b>Client (User)</b>"]
-    Controller["⚙️ <b>:OrderController</b>"]
-    OrderService["📦 <b>:OrderService</b>"]
-    Inventory["🏭 <b>:InventoryManager</b>"]
-    PaymentGateway["💳 <b>:PaymentGateway</b>"]
-    Notification["🔔 <b>:EmailNotifier</b>"]
+    Client["<b>Client (User)</b>"]
+    Controller["<b>:OrderController</b>"]
+    OrderService["<b>:OrderService</b>"]
+    Inventory["<b>:InventoryManager</b>"]
+    PaymentGateway["<b>:PaymentGateway</b>"]
+    Notification["<b>:EmailNotifier</b>"]
 
     Client -->|1. submitOrder(cart)| Controller
     Controller -->|1.1. processOrder(cart)| OrderService
@@ -730,7 +730,7 @@ flowchart TD
 
 ---
 
-### 13. Timing Diagram (ไทม์มิ่งไดอะแกรม)
+### 13. Timing Diagram
 
 > [!info] Concept & Purpose
 > A **Timing Diagram** is a specialized interaction diagram used in real-time embedded systems, hardware design, and protocol verification. It models the **exact state changes and value conditions** of one or more lifelines along a continuous, quantitative **timeline scale** with strict duration and latency constraints.
@@ -773,7 +773,7 @@ gantt
 
 ---
 
-### 14. Interaction Overview Diagram (อินเทอร์แอคชันโอเวอร์วิวไดอะแกรม)
+### 14. Interaction Overview Diagram
 
 > [!info] Concept & Purpose
 > An **Interaction Overview Diagram** provides a high-level macro view of system interactions by marrying the control-flow structure of an **Activity Diagram** with embedded **Interaction Frames** (miniature Sequence or Communication diagrams nested inside activity nodes).
@@ -812,7 +812,7 @@ flowchart TD
 
 ---
 
-# 🚀 Bonus: Entity-Relationship Diagram (ERD) for Software Engineering
+# Bonus: Entity-Relationship Diagram (ERD) for Software Engineering
 
 > [!tip] Practical Relevance in SE
 > While the ER Diagram is formally an ISO/IEC database standard rather than a pure UML 2.5 diagram, it is universally used alongside UML Class Diagrams to bridge **Object-Oriented Domain Entities** with **Relational Database Schemas (RDBMS)**.
@@ -902,7 +902,7 @@ When designing software architectures, use this quick-reference selection guide 
 
 ---
 
-## 🔗 Related Notes & Course References
+## Related Notes & Course References
 - [[CS261]] — Main Course Index for Software Engineering
 - [[Introduction to Software Engineering]] — Foundational principles and 3 dimensions of SE
 - [[Software Process]] — Process models, Waterfall, Spiral, and Agile Scrum sprints

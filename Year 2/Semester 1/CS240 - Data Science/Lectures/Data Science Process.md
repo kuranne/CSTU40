@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: The Data Science Lifecycle & Process
-course_code: CS240
+class: CS240
 week: 2
 tags:
   - data-science
@@ -10,11 +10,11 @@ tags:
   - machine-learning
   - crispm-dm
 description: Comprehensive guide to the end-to-end Data Science Process (CRISP-DM / OSEMN), from Problem Framing, Data Acquisition, EDA, Feature Engineering to Model Deployment.
+parent: "CS240"
 ---
 
-# 🔄 The Data Science Lifecycle & Process
+# The Data Science Lifecycle & Process
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS240]] > [[Data Science Process]]
 > **Related Notes:** [[The Data Science]] \| [[CS240]]
 > **Reference:** `Private/Docs/CS240_Week1_Principle_of_Data_Science.pdf`
 
@@ -41,14 +41,14 @@ The Data Science process is an iterative lifecycle that transforms raw, messy da
 
 ## 2. Step-by-Step Methodology
 
-### 🎯 Step 1: Problem Framing & Business Understanding
+### Step 1: Problem Framing & Business Understanding
 - Define project objectives clearly, concisely, and measurably.
 - Translate business questions into formal data science formulations (e.g., Binary/Multi-class Classification, Regression, Clustering, Anomaly Detection).
 - Establish Key Performance Indicators (KPIs) and project success metrics.
 
 ---
 
-### 📥 Step 2: Data Acquisition & Ingestion
+### Step 2: Data Acquisition & Ingestion
 - Harvest data across heterogeneous sources:
   - **Internal Data Assets:** Relational databases (SQL/RDBMS), Data Warehouses, CRM/ERP systems, application log streams.
   - **External Data Assets:** Open repositories (Kaggle, Data.gov, UCI ML), Web Scraping, RESTful Web APIs, Third-party vendors.
@@ -56,7 +56,7 @@ The Data Science process is an iterative lifecycle that transforms raw, messy da
 
 ---
 
-### 🧹 Step 3: Data Preparation & Preprocessing
+### Step 3: Data Preparation & Preprocessing
 *(Typically accounts for 60–80% of project time in real-world workflows)*
 1. **Handling Missing Values:**
    - Deletion: Dropping sparse rows or features.
@@ -70,7 +70,7 @@ The Data Science process is an iterative lifecycle that transforms raw, messy da
 
 ---
 
-### 🔍 Step 4: Exploratory Data Analysis (EDA)
+### Step 4: Exploratory Data Analysis (EDA)
 - **Descriptive Statistics:** Measures of central tendency (Mean, Median) and dispersion (Standard Deviation, Variance, Skewness, Kurtosis).
 - **Distribution Analysis:** Histograms, KDE Density plots, Q-Q plots for normality testing.
 - **Correlation & Feature Relationships:**
@@ -79,7 +79,7 @@ The Data Science process is an iterative lifecycle that transforms raw, messy da
 
 ---
 
-### ⚙️ Step 5: Feature Engineering & Selection
+### Step 5: Feature Engineering & Selection
 1. **Feature Transformation:**
    - Feature scaling: **Normalization** (Min-Max Scaling to $[0, 1]$), **Standardization** (Z-Score Scaling with $\mu=0, \sigma=1$).
    - Log transformation to handle skewed distributions.
@@ -90,7 +90,7 @@ The Data Science process is an iterative lifecycle that transforms raw, messy da
 
 ---
 
-### 🤖 Step 6: Model Building & Evaluation
+### Step 6: Model Building & Evaluation
 1. **Data Splitting:** Partition dataset into Training, Validation, and Test subsets (e.g., 70:15:15 or 80:20 split) alongside **K-Fold Stratified Cross-Validation**.
 2. **Model Training:** Fit appropriate candidate algorithms:
    - *Supervised Learning:* Linear/Logistic Regression, Decision Trees, Random Forest, Gradient Boosting (XGBoost, LightGBM), Neural Networks.
@@ -101,14 +101,14 @@ The Data Science process is an iterative lifecycle that transforms raw, messy da
 
 ---
 
-### 🚀 Step 7: Deployment, Monitoring & Storytelling
+### Step 7: Deployment, Monitoring & Storytelling
 - **Model Deployment:** Package models (Pickle, ONNX) and expose via REST APIs (FastAPI, Flask) or cloud microservices.
 - **Continuous Monitoring:** Track model latency, throughput, Data Drift, and Concept Drift over time.
 - **Data Storytelling:** Communicate strategic business insights and model interpretations to stakeholders via interactive dashboards and visual presentations.
 
 ---
 
-## 🐍 Python Lab Exercises in Vault
+## Python Lab Exercises in Vault
 
 Hands-on notebooks corresponding to the workflow above are located in `Labs/Week2/`:
 1. `Labs/Week2/02-1_KU-Eng_TUCS_Python_Basic_Data-Structures.ipynb` — Fundamental Python structures (Lists, Tuples, Dicts, Sets)
@@ -118,6 +118,6 @@ Hands-on notebooks corresponding to the workflow above are located in `Labs/Week
 
 ---
 
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS240]] — Main Course Index for Data Science
 - [[The Data Science]] — Introduction to Data Science and analytics maturity levels

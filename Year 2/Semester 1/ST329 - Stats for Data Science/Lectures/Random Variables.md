@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Random Variables (Discrete & Continuous Distributions)
-course_code: ST329
+class: ST329
 week: 1, 2
 tags:
   - statistics
@@ -12,11 +12,11 @@ tags:
   - expectation-variance
   - cstu40
 description: Core foundations of Discrete and Continuous Random Variables, PMF, PDF, CDF, Mathematical Expectation, and Variance.
+parent: "ST329"
 ---
 
-# 🎲 Random Variables
+# Random Variables
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[ST329]] > [[Random Variables]]
 > **Related Notes:** [[Formulae]] | [[ST329]] | [[CS240]]
 
 ---

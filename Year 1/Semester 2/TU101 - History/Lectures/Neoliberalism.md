@@ -8,13 +8,15 @@ tags:
   - 
 status: developing
 related:
-  - "[[TU101 Final Exam Summation]]"
+  - "TU101 Final Exam Summation"
 sources:
-  - "[[Final Summation TU101]]"
+  - "Final Summation TU101"
 complexity: intermediate
 domain: sociology
 address: c-000006
 description: Concept note discussing Neoliberalism in sociology.
+class: TU101
+parent: "TU101"
 ---
 
 # Neoliberalism

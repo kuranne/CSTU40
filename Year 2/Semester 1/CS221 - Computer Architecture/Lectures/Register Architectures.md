@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Register Architectures & ISA Models
-course_code: CS221
+class: CS221
 week: 2
 tags:
   - computer-architecture
@@ -10,11 +10,11 @@ tags:
   - cisc-vs-risc
   - assembly
 description: Comparative analysis of Register-Register (Load-Store), Register-Memory, Accumulator, and Stack Architectures with detailed execution traces and exercise solutions.
+parent: "CS221"
 ---
 
-# 🏗️ Register Architectures & ISA Models
+# Register Architectures & ISA Models
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS221]] > [[Register Architectures]]
 > **Related Notes:** [[Instructions]] \| [[General Purpose]] \| [[Concurrency of CPU]] \| [[CS221]]
 
 ---
@@ -70,7 +70,7 @@ sub M, R1           # R1 = R1 - Mem[M]
 
 ## 2. Worked Quizzes & Expression Tracing
 
-### 📌 Exercise 1: Computing $A = (A + B) - (C + D) - E$
+### Exercise 1: Computing $A = (A + B) - (C + D) - E$
 
 #### Solution 1.1: Register-Register Architecture (Load-Store)
 ```asm
@@ -108,7 +108,7 @@ store R1, A         # Mem[A] = R1
 
 ---
 
-### 📌 Exercise 2: $A = (A + B) - (C + D + E) + F$ on Accumulator Architecture ($\le$ 7 Instructions)
+### Exercise 2: $A = (A + B) - (C + D + E) + F$ on Accumulator Architecture ($\le$ 7 Instructions)
 
 > [!tip] **Algebraic Expansion:**
 > $$A = A + B - C - D - E + F$$
@@ -125,7 +125,7 @@ store R1, A         # Mem[A] = R1
 
 ---
 
-### 📌 Exercise 3: Converting Accumulator Assembly to Mathematical Formula
+### Exercise 3: Converting Accumulator Assembly to Mathematical Formula
 
 **Assembly Code:**
 ```asm
@@ -145,7 +145,7 @@ store A
 
 ---
 
-### 📌 Exercise 4: Converting Stack Assembly to Mathematical Formula
+### Exercise 4: Converting Stack Assembly to Mathematical Formula
 
 **Assembly Code:**
 ```asm
@@ -169,7 +169,7 @@ pop A
 
 ---
 
-## 🔗 Related Notes & References
+## Related Notes & References
 - [[CS221]] — Main Course Index for Computer Architecture
 - [[Instructions]] — ISA categories, machine instructions, and comparison matrix
 - [[General Purpose]] — GPRs, integer representations, and addressing modes

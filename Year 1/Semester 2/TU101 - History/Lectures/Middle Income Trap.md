@@ -8,13 +8,15 @@ tags:
   - 
 status: developing
 related:
-  - "[[TU101 Final Exam Summation]]"
+  - "TU101 Final Exam Summation"
 sources:
-  - "[[Final Summation TU101]]"
+  - "Final Summation TU101"
 complexity: intermediate
 domain: economics
 address: c-000005
 description: Concept note analyzing the economics of the Middle Income Trap.
+class: TU101
+parent: "TU101"
 ---
 
 # Middle Income Trap

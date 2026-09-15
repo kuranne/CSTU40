@@ -1,7 +1,7 @@
 ---
 type: lecture
 title: Searching Algorithms (Binary Search)
-course_code: CS213
+class: CS213
 semester: Year 2 Semester 1
 week: 5
 tags:
@@ -13,11 +13,11 @@ tags:
 description: "Binary search mechanics on sorted arrays, midpoint index calculations, search space reduction, and logarithmic time complexity analysis."
 created: 2026-09-03
 updated: 2026-09-05
+parent: "CS213"
 ---
 
-# 🔍 Searching Algorithms
+# Searching Algorithms
 
-> [!info] Navigation: [[CSTU40]] > [[Year 2]] > [[Year 2 Semester 1]] > [[CS213]] > [[Searching]]
 > **Related Notes:** [[CS213]] | [[Introduction to Data Structure]] | [[Linked List]]
 
 ---
@@ -54,4 +54,3 @@ Binary search uses the attribute of an ordered (sorted) data set. The method wil
 > This method has Big-O complexity of $\mathcal{O}(\log n)$.
 
 ---
-
