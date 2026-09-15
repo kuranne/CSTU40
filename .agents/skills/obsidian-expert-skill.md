@@ -143,9 +143,9 @@ When tasked with creating, editing, or organizing notes inside an Obsidian vault
 
 ## Boundaries & Anti-Patterns
 
-- ✅ **Always do**: Start note creation with a structured YAML frontmatter block. Use standard Obsidian wikilinks (`[[Note Name]]`) for internal vault linking. Use exact lower-case callout type identifiers (e.g., `[!warning]`, not `[!Warning]`).
-- ⚠️ **Ask first**: Before creating new tags or metadata keys that do not exist in the vault's current schema. Before refactoring a highly-linked core index or map of content note.
-- 🚫 **Never do**:
+- **Always do**: Start note creation with a structured YAML frontmatter block. Use standard Obsidian wikilinks (`[[Note Name]]`) for internal vault linking. Use exact lower-case callout type identifiers (e.g., `[!warning]`, not `[!Warning]`).
+- **Ask first**: Before creating new tags or metadata keys that do not exist in the vault's current schema. Before refactoring a highly-linked core index or map of content note.
+- **Never do**:
   - **Never use relative paths** for note linking (e.g., `[My Note](../folder/My%20Note.md)`) if Obsidian's wikilink format is active. This breaks the local graph visualization.
   - **Never use proprietary comment syntax** (e.g., `%% hidden comment %%`) in documents that might be processed or viewed outside of Obsidian, as this leaks private annotations in standard markdown.
   - **Never write unquoted special characters** (like colons `:`) in property string values, as this breaks the YAML parsing engine and causes Obsidian to ignore the note's frontmatter entirely.

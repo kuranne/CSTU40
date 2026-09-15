@@ -24,8 +24,8 @@ This skill provides complete, spec-valid instructions, syntax tables, and design
 
 ### 1.1 Inline Math (`$...$`)
 - **Rule**: Single dollar signs with **no whitespace** immediately inside the delimiters.
-- ✅ **Correct**: `$E = mc^2$` or `$P(A|B) = \frac{P(A \cap B)}{P(B)}$`
-- ❌ **Incorrect**: `$ E = mc^2 $` (Leading/trailing spaces prevent MathJax parsing).
+- **Correct**: `$E = mc^2$` or `$P(A|B) = \frac{P(A \cap B)}{P(B)}$`
+- **Incorrect**: `$ E = mc^2 $` (Leading/trailing spaces prevent MathJax parsing in Obsidian).
 
 ### 1.2 Display / Block Math (`$$...$$`)
 - **Rule**: Double dollar signs placed on separate lines enclosing the equation block:
