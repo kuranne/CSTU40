@@ -27,4 +27,12 @@ log/
 .run_cache/
 **/.run_cache/**
 
+# Binary and course archives
+*.rar
+*.war
+*.zip
+*.tar
+*.gz
 
+# Local git scripts config
+.gsc.config

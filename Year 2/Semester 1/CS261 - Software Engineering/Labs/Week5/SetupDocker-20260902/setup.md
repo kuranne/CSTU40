@@ -10,7 +10,7 @@ docker network create mynetwork1
 
 docker build -f DockerContainer_MS_SQL.dockerfile -t my-mssql-image .
 
-docker run -d --platform linux/amd64 --name sql-server --network mynetwork1 -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=YourStrong@Passw0rd" -p 1433:1433 -m 4g  my-mssql-image
+docker run -d --platform linux/amd64 --name sql-server --network mynetwork1 -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YOUR_PASSWORD>" -p 1433:1433 -m 4g  my-mssql-image
 
 # find the network on which the sql-server container is running.
 docker inspect --format "{{json .NetworkSettings.Networks}}" sql-server
