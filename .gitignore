@@ -36,3 +36,9 @@ log/
 
 # Local git scripts config
 .gsc.config
+
+# Lecture screenshots and slide images
+**/Screenshot*.*
+**/Pasted image*.*
+**/*screenshot*.*
+**/*Screenshot*.*
