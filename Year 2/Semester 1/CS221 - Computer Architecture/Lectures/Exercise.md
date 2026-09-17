@@ -133,3 +133,21 @@ when `mrmov D(rB), rA` is executed
 | 6. PC Update  | 0       | 0         | 0         | 0         | 0         | 0         | ==1==   |
 
 ---
+
+## 8.What is the execution time and CPI of the following program when the clock period is set to 0.5 ns?
+
+```asm
+push %rbx ; 6 cc
+push %rsi ; 6 cc
+irmov $0, %rbx ; 4 cc
+irmov $5,%rsi ; 4 cc
+add %rbx,%rsi ; 5 cc
+pop %rsi ; 6 cc
+pop %rbx ; 6 cc
+ret ; 6 cc
+```
+
+So the execution time is $43 \times 0.5$
+CPI = $43 \div 8 = 5.375$
+
+---
