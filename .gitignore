@@ -33,6 +33,7 @@ log/
 *.zip
 *.tar
 *.gz
+*.gif
 
 # Local git scripts config
 .gsc.config
