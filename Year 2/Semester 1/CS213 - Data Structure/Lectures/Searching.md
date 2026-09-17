@@ -22,11 +22,11 @@ parent: "CS213"
 
 ---
 
-Meaning to search index in array.
+---
 
 ## Binary Search Method
 
-Binary search uses the attribute of an ordered (sorted) data set. The method will query from the middle; then if the middle element is the target, return that index. If not, check if the index's value is smaller than the target, so the target must be to the right of middle; then $	ext{next} = \frac{	ext{middle} + 	ext{high}}{2}$ to find the new index. Of course, if the index's value is larger than the target, $	ext{next} = \frac{	ext{low} + 	ext{middle}}{2}$. (The limit of index is middle to high or low to middle, depending on where the target is).
+Binary search uses the attribute of an ordered (sorted) data set. The method will query from the middle; then if the middle element is the target, return that index. If not, check if the index's value is smaller than the target, so the target must be to the right of middle; then $ ext{next} = \frac{ ext{middle} + ext{high}}{2}$ to find the new index. Of course, if the index's value is larger than the target, $ ext{next} = \frac{ ext{low} + ext{middle}}{2}$. (The limit of index is middle to high or low to middle, depending on where the target is).
 
 ```
                                               v
@@ -49,8 +49,5 @@ Binary search uses the attribute of an ordered (sorted) data set. The method wil
 |0       |1  |2   |3   |4   |5   |6   |7  |8  |9   |10  |11  |12  |13  |14  |15 |
 +--------+---+----+----+----+----+----+---+---+----+----+----+----+----+----+---+
 ```
-
-> [!tip] Time Complexity
-> This method has Big-O complexity of $\mathcal{O}(\log n)$.
 
 ---
